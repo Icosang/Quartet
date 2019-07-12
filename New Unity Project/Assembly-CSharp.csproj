@@ -63,7 +63,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BackgroundReleaser.cs" />
+    <Compile Include="Assets\Scripts\Bwall.cs" />
+    <Compile Include="Assets\Scripts\Lwall.cs" />
     <Compile Include="Assets\Scripts\PlayerScript.cs" />
+    <Compile Include="Assets\Scripts\Rwall.cs" />
+    <Compile Include="Assets\Scripts\Twall.cs" />
     <Compile Include="Assets\Scripts\UbhBaseShot.cs" />
     <Compile Include="Assets\Scripts\UbhBullet.cs" />
     <Compile Include="Assets\Scripts\UbhBulletSimpleSprite2d.cs" />
