@@ -40,6 +40,14 @@ public class PlayerScript : MonoBehaviour
 
     }
     void FixedUpdate() {
-        // 5 - Shooting
+        // 5 - Shooting  
+        if (Input.GetKey(KeyCode.Z) && !gameObject.GetComponent<UbhShotCtrl>().shooting)
+        {
+            gameObject.GetComponent<UbhShotCtrl>().StartShotRoutine();
+        }
+        else if (!Input.GetKey(KeyCode.Z))
+        {
+            gameObject.GetComponent<UbhShotCtrl>().StopShotRoutine();
+        }
     }
 }

@@ -937,5 +937,20 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 0.0001
       objectReference: {fileID: 0}
+    - target: {fileID: 548576095833921720, guid: 022a831ff86ce0946be097d177c37ae2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 548576095128827077, guid: 022a831ff86ce0946be097d177c37ae2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 548576095690704669, guid: 022a831ff86ce0946be097d177c37ae2,
+        type: 3}
+      propertyPath: m_startOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 022a831ff86ce0946be097d177c37ae2, type: 3}
