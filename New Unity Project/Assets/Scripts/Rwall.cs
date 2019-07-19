@@ -2,24 +2,24 @@
 
 public class Rwall : MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D c)
+    void OnCollisionEnter2D(Collision2D c)
 
     {
         if (c.gameObject.tag == "Player")
         {
             PlayerScript player = c.gameObject?.GetComponent<PlayerScript>();
             if (player != null){
-                player.Rboundary = false;                
+                player.RMoveSwitch = false;                
             }
         }
     }
-    void OnTriggerExit2D(Collider2D c)
+    void OnCollisionExit2D(Collision2D c)
 
     {
         if (c.gameObject.tag == "Player")
         {
             PlayerScript player = c.gameObject?.GetComponent<PlayerScript>();
-            if (player != null) player.Rboundary = true;
+            if (player != null) player.RMoveSwitch = true;
         }
     }
 }

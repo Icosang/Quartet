@@ -2,24 +2,24 @@
 
 public class Twall : MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D c)
+    void OnCollisionEnter2D(Collision2D c)
 
     {
         if (c.gameObject.tag == "Player")
         {
             PlayerScript player = c.gameObject?.GetComponent<PlayerScript>();
             if (player != null){
-                player.Tboundary = false;                
+                player.TMoveSwitch = false;                
             }
         }
     }
-    void OnTriggerExit2D(Collider2D c)
+    void OnCollisionExit2D(Collision2D c)
 
     {
         if (c.gameObject.tag == "Player")
         {
             PlayerScript player = c.gameObject?.GetComponent<PlayerScript>();
-            if (player != null) player.Tboundary = true;
+            if (player != null) player.TMoveSwitch = true;
         }
     }
 }

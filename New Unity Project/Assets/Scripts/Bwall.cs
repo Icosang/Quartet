@@ -2,24 +2,24 @@
 
 public class Bwall : MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D c)
+    void OnCollisionEnter2D(Collision2D c)
 
     {
         if (c.gameObject.tag == "Player")
         {
             PlayerScript player = c.gameObject?.GetComponent<PlayerScript>();
             if (player != null){
-                player.Bboundary = false;                
+                player.BMoveSwitch = false;                
             }
         }
     }
-    void OnTriggerExit2D(Collider2D c)
+    void OnCollisionExit2D(Collision2D c)
 
     {
         if (c.gameObject.tag == "Player")
         {
             PlayerScript player = c.gameObject?.GetComponent<PlayerScript>();
-            if (player != null) player.Bboundary = true;
+            if (player != null) player.BMoveSwitch = true;
         }
     }
 }

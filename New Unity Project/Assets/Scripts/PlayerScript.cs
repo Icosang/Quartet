@@ -9,10 +9,10 @@ public class PlayerScript : MonoBehaviour
     /// 1 - The speed of the ship
     /// </summary>
     public float speed = 18f;
-    public bool Lboundary { get; set; } = true;
-    public bool Rboundary { get; set; } = true;
-    public bool Tboundary { get; set; } = true;
-    public bool Bboundary { get; set; } = true;
+    public bool LMoveSwitch { get; set; } = true;
+    public bool RMoveSwitch { get; set; } = true;
+    public bool TMoveSwitch { get; set; } = true;
+    public bool BMoveSwitch { get; set; } = true;
     void Update()
     {
         // 3 - Retrieve axis information
@@ -21,11 +21,11 @@ public class PlayerScript : MonoBehaviour
 
         //방향설정
 
-        if (Input.GetKey(KeyCode.LeftArrow)&&Lboundary) inputX = -1f;
-        else if (Input.GetKey(KeyCode.RightArrow)&&Rboundary) inputX = 1f;
+        if (Input.GetKey(KeyCode.LeftArrow)&&LMoveSwitch) inputX = -1f;
+        else if (Input.GetKey(KeyCode.RightArrow)&&RMoveSwitch) inputX = 1f;
 
-        if (Input.GetKey(KeyCode.DownArrow)&&Bboundary) inputY = -1f;
-        else if (Input.GetKey(KeyCode.UpArrow)&&Tboundary) inputY = 1f;
+        if (Input.GetKey(KeyCode.DownArrow)&&BMoveSwitch) inputY = -1f;
+        else if (Input.GetKey(KeyCode.UpArrow)&&TMoveSwitch) inputY = 1f;
 
         //저속모드
 
@@ -41,6 +41,5 @@ public class PlayerScript : MonoBehaviour
     }
     void FixedUpdate() {
         // 5 - Shooting
-
     }
 }
