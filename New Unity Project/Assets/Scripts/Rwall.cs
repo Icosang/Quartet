@@ -9,7 +9,8 @@ public class Rwall : MonoBehaviour
         {
             PlayerScript player = c.gameObject?.GetComponent<PlayerScript>();
             if (player != null){
-                player.RMoveSwitch = false;                
+                player.RMoveSwitch = false;
+                player.inputX = 0f;
             }
         }
     }

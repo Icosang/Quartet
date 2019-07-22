@@ -9,7 +9,8 @@ public class Twall : MonoBehaviour
         {
             PlayerScript player = c.gameObject?.GetComponent<PlayerScript>();
             if (player != null){
-                player.TMoveSwitch = false;                
+                player.TMoveSwitch = false;
+                player.inputY = 0f;
             }
         }
     }

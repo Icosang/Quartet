@@ -10,6 +10,7 @@ public class Lwall : MonoBehaviour
             PlayerScript player = c.gameObject?.GetComponent<PlayerScript>();
             if (player != null){
                 player.LMoveSwitch = false;
+                player.inputX = 0f;
             }
         }
     }

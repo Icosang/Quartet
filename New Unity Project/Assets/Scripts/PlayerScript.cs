@@ -13,26 +13,33 @@ public class PlayerScript : MonoBehaviour
     public bool RMoveSwitch { get; set; } = true;
     public bool TMoveSwitch { get; set; } = true;
     public bool BMoveSwitch { get; set; } = true;
+    // 3 - Retrieve axis information
+    public float inputX { get; set; } = 0f;
+    public float inputY { get; set; } = 0f;
+    Vector2 destination;
     void Update()
     {
-        // 3 - Retrieve axis information
-        float inputX = 0f;
-        float inputY = 0f;
 
         //방향설정
 
-        if (Input.GetKey(KeyCode.LeftArrow)&&LMoveSwitch) inputX = -1f;
-        else if (Input.GetKey(KeyCode.RightArrow)&&RMoveSwitch) inputX = 1f;
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && LMoveSwitch) inputX = -1f;
+        else if (Input.GetKeyDown(KeyCode.RightArrow) && RMoveSwitch) inputX = 1f;
+        else if (!(Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))) inputX = 0f;
 
-        if (Input.GetKey(KeyCode.DownArrow)&&BMoveSwitch) inputY = -1f;
-        else if (Input.GetKey(KeyCode.UpArrow)&&TMoveSwitch) inputY = 1f;
+        if (Input.GetKeyDown(KeyCode.DownArrow) && BMoveSwitch) inputY = -1f;
+        else if (Input.GetKeyDown(KeyCode.UpArrow) && TMoveSwitch) inputY = 1f;
+        else if (!(Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.UpArrow))) inputY = 0f;
 
-        //저속모드
-
-        if (Input.GetKey(KeyCode.LeftShift)) { inputX /= 4; inputY /= 4; }
-
-        Vector2 destination =
+        destination = 
             new Vector2(transform.position.x + (inputX * speed * Time.deltaTime), transform.position.y + (inputY * speed * Time.deltaTime));
+
+        //저속모드       
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            destination =
+                new Vector2(transform.position.x + (inputX * speed * Time.deltaTime/4), transform.position.y + (inputY * speed * Time.deltaTime/4));
+        }
 
         // 4 - Movement per direction
         transform.position = destination;

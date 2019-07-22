@@ -9,7 +9,8 @@ public class Bwall : MonoBehaviour
         {
             PlayerScript player = c.gameObject?.GetComponent<PlayerScript>();
             if (player != null){
-                player.BMoveSwitch = false;                
+                player.BMoveSwitch = false;
+                player.inputY = 0f;
             }
         }
     }
