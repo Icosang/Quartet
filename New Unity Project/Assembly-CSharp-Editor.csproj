@@ -62,11 +62,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\UniBulletHell\Script\Editor\UbhBaseShotInspector.cs" />
-    <Compile Include="Assets\UniBulletHell\Script\Editor\UbhObjectPoolInspector.cs" />
-    <Compile Include="Assets\UniBulletHell\Script\Editor\UbhPaintShotInspector.cs" />
-    <Compile Include="Assets\UniBulletHell\Script\Editor\UbhShotCtrlInspector.cs" />
-    <Compile Include="Assets\UniBulletHell\Script\Editor\UbhTimerInspector.cs" />
+    <Compile Include="Assets\Scripts\Ubh\Script\Editor\UbhBaseShotInspector.cs" />
+    <Compile Include="Assets\Scripts\Ubh\Script\Editor\UbhObjectPoolInspector.cs" />
+    <Compile Include="Assets\Scripts\Ubh\Script\Editor\UbhPaintShotInspector.cs" />
+    <Compile Include="Assets\Scripts\Ubh\Script\Editor\UbhShotCtrlInspector.cs" />
+    <Compile Include="Assets\Scripts\Ubh\Script\Editor\UbhTimerInspector.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/겜기획/goodmusicSTG/New Unity Project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
