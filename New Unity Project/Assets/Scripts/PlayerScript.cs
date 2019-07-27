@@ -38,7 +38,7 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             destination =
-                new Vector2(transform.position.x + (inputX * speed * Time.deltaTime/4), transform.position.y + (inputY * speed * Time.deltaTime/4));
+                new Vector2(transform.position.x + (inputX * speed * Time.deltaTime/4f), transform.position.y + (inputY * speed * Time.deltaTime/4f));
         }
 
         // 4 - Movement per direction
