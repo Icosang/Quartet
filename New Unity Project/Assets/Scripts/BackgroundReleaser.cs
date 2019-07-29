@@ -15,10 +15,14 @@ public class BackgroundReleaser : MonoBehaviour
             {
                 bullet = c.transform.parent.GetComponent<UbhPlayerBullet>();
             }
+            else if (c.transform.parent.GetComponent<UbhBulletSimpleSprite2d>() != null) {
+                bullet = c.transform.parent.GetComponent<UbhBulletSimpleSprite2d>();
+            }
 
             if (bullet != null && bullet.isActive){
                 UbhObjectPool.instance.ReleaseBullet(bullet);
             }
+            
         }
 
     }

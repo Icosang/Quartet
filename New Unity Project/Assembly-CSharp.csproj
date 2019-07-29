@@ -71,7 +71,6 @@
     <Compile Include="Assets\Scripts\Ubh\Script\Attribute\UbhConditionalHideAttribute.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\Bullet\UbhTentacleBullet.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\Controller\UbhShotCtrl.cs" />
-    <Compile Include="Assets\Scripts\Ubh\Script\ShotPattern\UbhCircleShot.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\ShotPattern\UbhHoleCircleLockOnShot.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\ShotPattern\UbhHoleCircleShot.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\ShotPattern\UbhHomingShot.cs" />
@@ -106,6 +105,7 @@
     <Compile Include="Assets\Scripts\Ubh\UbhBaseShot.cs" />
     <Compile Include="Assets\Scripts\Ubh\UbhBullet.cs" />
     <Compile Include="Assets\Scripts\Ubh\UbhBulletSimpleSprite2d.cs" />
+    <Compile Include="Assets\Scripts\Ubh\UbhCircleShot.cs" />
     <Compile Include="Assets\Scripts\Ubh\UbhEnemy.cs" />
     <Compile Include="Assets\Scripts\Ubh\UbhLinearShot.cs" />
     <Compile Include="Assets\Scripts\Ubh\UbhMonoBehaviour.cs" />

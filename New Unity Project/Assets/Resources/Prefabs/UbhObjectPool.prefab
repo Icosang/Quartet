@@ -43,4 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5734f8781b642d942b6f05ff4d55d70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_initializePoolList: []
+  m_initializePoolList:
+  - m_bulletPrefab: {fileID: 100000, guid: a3902afd92be0a742a0b754c34818472, type: 3}
+    m_initialPoolNum: 200
