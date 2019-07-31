@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7703393664072653545}
   - component: {fileID: 8278592581732994823}
   m_Layer: 0
-  m_Name: DrumBulletParent
+  m_Name: DrumBullet2Parent
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 7703393664072653540}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7537018552050788875}
   m_Father: {fileID: 0}
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_rigidbody2d: {fileID: 7703393664072653545}
   m_collider2ds:
-  - {fileID: 753132050237901367}
+  - {fileID: 548321616544462233}
   m_spriteRenderers:
   - {fileID: 3769457572839585306}
 --- !u!1 &8882506389665854091
@@ -81,9 +81,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7537018552050788875}
   - component: {fileID: 3769457572839585306}
-  - component: {fileID: 753132050237901367}
+  - component: {fileID: 8009909798640985890}
+  - component: {fileID: 548321616544462233}
   m_Layer: 0
-  m_Name: DrumBullet
+  m_Name: DrumBullet2
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,13 +97,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8882506389665854091}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7703393664072653547}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &3769457572839585306
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -140,7 +141,7 @@ SpriteRenderer:
   m_SortingLayerID: -1501260043
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0ebd9e7f1c4af6f4f92cd6a7377853c3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 34cfc508002899e48b22abc3135c7c7e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -151,8 +152,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &753132050237901367
-CircleCollider2D:
+--- !u!50 &8009909798640985890
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8882506389665854091}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!60 &548321616544462233
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -165,5 +187,22 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.06
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.12, y: 1.2}
+    newSize: {x: 0.12, y: 0.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.04, y: 0.6}
+      - {x: -0.015, y: -0.5}
+      - {x: -0.035, y: -0.52}
+      - {x: -0.015, y: -0.59}
+      - {x: 0.015, y: -0.59}
+      - {x: 0.035, y: -0.52}
+      - {x: 0.015, y: -0.5}
+      - {x: 0.04, y: 0.59999996}

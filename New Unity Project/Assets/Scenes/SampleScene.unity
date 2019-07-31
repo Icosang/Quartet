@@ -417,7 +417,11 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 11490706, guid: 5e89e845649784c469dc3c5d82255a9e, type: 3}
       propertyPath: m_initializePoolList.Array.data[1].m_initialPoolNum
-      value: 500
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 11490706, guid: 5e89e845649784c469dc3c5d82255a9e, type: 3}
+      propertyPath: m_initializePoolList.Array.data[0].m_initialPoolNum
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e89e845649784c469dc3c5d82255a9e, type: 3}
@@ -994,51 +998,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2325097279747683783, guid: b4bac3547408bc742bbb68e40527b370,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 716590595025413651, guid: b4bac3547408bc742bbb68e40527b370,
-        type: 3}
-      propertyPath: m_startOnAwake
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 716590595025413651, guid: b4bac3547408bc742bbb68e40527b370,
-        type: 3}
-      propertyPath: m_inheritAngle
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8295507719796694067, guid: b4bac3547408bc742bbb68e40527b370,
-        type: 3}
-      propertyPath: m_angle
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8508348932115011592, guid: b4bac3547408bc742bbb68e40527b370,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.17364816
-      objectReference: {fileID: 0}
-    - target: {fileID: 8508348932115011592, guid: b4bac3547408bc742bbb68e40527b370,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9848078
-      objectReference: {fileID: 0}
-    - target: {fileID: 8508348932115011592, guid: b4bac3547408bc742bbb68e40527b370,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2696195994387179562, guid: b4bac3547408bc742bbb68e40527b370,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4047622836491854481, guid: b4bac3547408bc742bbb68e40527b370,
-        type: 3}
-      propertyPath: m_startOnAwake
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4bac3547408bc742bbb68e40527b370, type: 3}
