@@ -40,6 +40,16 @@ public class PlayerScript : MonoBehaviour
             destination =
                 new Vector2(transform.position.x + (inputX * speed * Time.deltaTime/4f), transform.position.y + (inputY * speed * Time.deltaTime/4f));
         }
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            transform.FindChild("PlayerHitbox").gameObject.GetComponent<SpriteRenderer>().enabled = true;
+
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            transform.FindChild("PlayerHitbox").gameObject.GetComponent<SpriteRenderer>().enabled = false;
+
+        }
 
         // 4 - Movement per direction
         transform.position = destination;
