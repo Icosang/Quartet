@@ -6,8 +6,7 @@ public class BackgroundReleaser : MonoBehaviour
     void OnTriggerExit2D(Collider2D c)
 
     {
-        //임시로 플레이어불렛만 적용, 나중에 고칠것
-        if (c.gameObject.tag == "Bullet")
+        if (c.gameObject.tag == "Bullet" || c.gameObject.tag == "Playerbullet")
         {
             UbhBullet bullet = null;
 

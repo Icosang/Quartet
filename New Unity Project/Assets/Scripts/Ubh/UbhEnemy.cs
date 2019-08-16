@@ -12,7 +12,10 @@ public class UbhEnemy : UbhMonoBehaviour
     // 포인트. 나중에 시스템에 추가할 것
     [SerializeField, FormerlySerializedAs("_Point")]
     private int m_point = 100;
-    
+
+    [SerializeField]
+    private bool Invincible = false;
+
     private void OnTriggerEnter2D(Collider2D c)
     {
         // *It is compared with name in order to separate as Asset from project settings.
@@ -24,7 +27,7 @@ public class UbhEnemy : UbhMonoBehaviour
             {
                 UbhObjectPool.instance.ReleaseBullet(playerBullet);
 
-                m_hp = m_hp - playerBullet.m_power;
+                if (!Invincible) m_hp = m_hp - playerBullet.m_power;
 
                 if (m_hp <= 0)
                 {

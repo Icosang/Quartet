@@ -42,12 +42,12 @@ public class PlayerScript : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            transform.FindChild("PlayerHitbox").gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            transform.Find("PlayerHitbox").gameObject.GetComponent<SpriteRenderer>().enabled = true;
 
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            transform.FindChild("PlayerHitbox").gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            transform.Find("PlayerHitbox").gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
         }
 
