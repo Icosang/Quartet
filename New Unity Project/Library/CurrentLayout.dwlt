@@ -336,20 +336,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/EnemyPattern
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/EnemyPattern
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "D:\\\uAC9C\uAE30\uD68D\\goodmusicSTG\\New Unity Project"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ca410000
-    m_LastClickedID: 16842
-    m_ExpandedIDs: 00000000902a0000ce2a00008e2b00002e2d0000722d0000f02d0000142e0000562e0000ae30000000ca9a3b
+    scrollPos: {x: 0, y: 35}
+    m_SelectedIDs: fa2c0000
+    m_LastClickedID: 11514
+    m_ExpandedIDs: 00000000162a0000562a0000ce2a0000262b0000fa2c0000462d0000002e0000422e0000a02e0000f02f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -377,7 +377,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 84}
     m_SelectedIDs: 902e0000
     m_LastClickedID: 11920
-    m_ExpandedIDs: 00000000902a0000ce2a00008e2b00002e2d0000722d0000f02d0000142e0000562e0000ae300000
+    m_ExpandedIDs: 00000000162a0000562a0000ce2a0000262b0000462d0000d82d0000002e0000422e0000a02e0000f02f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -463,7 +463,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 40fbffff58fbffff80fbffff82fbffff9a2f00009e2f0000
+      m_ExpandedIDs: 2efbffff4efbffff78fbffff1e2f0000222f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -518,14 +518,14 @@ MonoBehaviour:
   m_Gizmos: 1
   m_SceneIsLit: 1
   m_SceneLighting: 1
-  m_2DMode: 1
+  m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.8731495, y: -2.2269254, z: -2.5384374}
+    m_Target: {x: 0, y: 0, z: 0}
     speed: 2
-    m_Value: {x: 0.8731495, y: -2.2269254, z: -2.5384374}
+    m_Value: {x: 0, y: 0, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -546,25 +546,25 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
     yGrid:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    zGrid:
       m_Target: 1
       speed: 2
       m_Value: 1
+    zGrid:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
   m_Rotation:
-    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    m_Target: {x: -0.077767596, y: 0.47893304, z: -0.04264599, w: -0.8733625}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: -0.077767394, y: 0.47893178, z: -0.04264588, w: -0.8733602}
   m_Size:
-    m_Target: 12.310494
+    m_Target: 32.765625
     speed: 2
-    m_Value: 12.310494
+    m_Value: 32.765625
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.49748743
@@ -631,7 +631,7 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMin: 1
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
-    m_HSlider: 0
+    m_HSlider: 1
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
@@ -645,18 +645,18 @@ MonoBehaviour:
       y: 17
       width: 402
       height: 291
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 201, y: 145.5}
+    m_Scale: {x: 1.0609, y: 1.0609}
+    m_Translation: {x: 194.23291, y: 145.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -201
-      y: -145.5
-      width: 402
-      height: 291
+      x: -183.08315
+      y: -137.1477
+      width: 378.92355
+      height: 274.2954
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
