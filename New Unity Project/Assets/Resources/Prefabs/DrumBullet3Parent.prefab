@@ -82,6 +82,7 @@ GameObject:
   - component: {fileID: 7537018552050788875}
   - component: {fileID: 3769457572839585306}
   - component: {fileID: 753132050237901367}
+  - component: {fileID: 3627475780935471498}
   m_Layer: 0
   m_Name: DrumBullet3
   m_TagString: Bullet
@@ -167,3 +168,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.03
+--- !u!114 &3627475780935471498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8882506389665854091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65ad89025b76654da8964b94460ffcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

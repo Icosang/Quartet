@@ -12,7 +12,6 @@ using System.Collections.Generic;
 [ExecuteInEditMode]
 public class ShockWave_WorldSpace : MonoBehaviour 
 {
-
     /// <summary>
     /// this is the material that will store the ShockWave Shader
     /// </summary>
