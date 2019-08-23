@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 33062649953512620}
   - component: {fileID: 23477735969824924}
   - component: {fileID: 114998908910662448}
-  - component: {fileID: 1017101332356521259}
-  - component: {fileID: -7738034037874413841}
   m_Layer: 1
   m_Name: ShockWave(WorldSpace)
   m_TagString: Untagged
@@ -177,31 +175,3 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 0
   timePreview_InEditModeOnly: 0.974
---- !u!58 &1017101332356521259
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1551183448316828}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.0001
---- !u!114 &-7738034037874413841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1551183448316828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0622031b46d239449a8cec7fae93a2c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

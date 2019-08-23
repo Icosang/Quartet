@@ -6,7 +6,7 @@ public class DrumPattern2 : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D c)
     {
-        if (c.transform.name.Contains("ShockWave")) {
+        if (c.transform.name.Contains("Ride")) {
             Time.timeScale = 0;
         }
     }

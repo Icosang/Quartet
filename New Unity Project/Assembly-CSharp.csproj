@@ -66,7 +66,6 @@
     <Compile Include="Assets\Scripts\Bwall.cs" />
     <Compile Include="Assets\Scripts\EnemyPattern\DrumPattern1.cs" />
     <Compile Include="Assets\Scripts\EnemyPattern\DrumPattern2.cs" />
-    <Compile Include="Assets\Scripts\EnemyPattern\DrumPattern2Ride.cs" />
     <Compile Include="Assets\Scripts\EnemyPattern\DrumRideShockWave.cs" />
     <Compile Include="Assets\Scripts\Lwall.cs" />
     <Compile Include="Assets\Scripts\PlayerHitbox.cs" />
@@ -74,7 +73,6 @@
     <Compile Include="Assets\Scripts\Rwall.cs" />
     <Compile Include="Assets\Scripts\Shockwave\ShockWave.cs" />
     <Compile Include="Assets\Scripts\Shockwave\ShockWave_WorldSpace.cs" />
-    <Compile Include="Assets\Scripts\Shockwave\ShockwaveColider.cs" />
     <Compile Include="Assets\Scripts\Twall.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\Attribute\UbhConditionalHideAttribute.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\Bullet\UbhTentacleBullet.cs" />
