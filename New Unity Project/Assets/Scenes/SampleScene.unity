@@ -1433,5 +1433,20 @@ PrefabInstance:
       propertyPath: m_bulletNum
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 7158249549184457694, guid: b4bac3547408bc742bbb68e40527b370,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158249549184457694, guid: b4bac3547408bc742bbb68e40527b370,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158249549184457694, guid: b4bac3547408bc742bbb68e40527b370,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4bac3547408bc742bbb68e40527b370, type: 3}

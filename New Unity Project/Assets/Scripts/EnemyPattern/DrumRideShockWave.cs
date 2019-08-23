@@ -6,7 +6,7 @@ public class DrumRideShockWave : MonoBehaviour
 {
     CircleCollider2D circle;
 
-    float maxRadius = 2f;
+    float maxRadius = 18f;
     float t = 0f;
 
     void Awake()
@@ -27,10 +27,11 @@ public class DrumRideShockWave : MonoBehaviour
     {
         while (circle.radius < maxRadius * 0.995f)
         {
-            t += Time.deltaTime;
+            t += (Time.deltaTime*4);
             circle.radius = Mathf.Lerp(circle.radius, maxRadius, t);
-            t = 0f;
             yield return null;
         }
+        t = 0f;
+        circle.radius = 0.0001f;
     }
 }
