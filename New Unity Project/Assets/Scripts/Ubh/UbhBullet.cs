@@ -9,7 +9,8 @@ public class UbhBullet : UbhMonoBehaviour
     private Transform m_transformCache;
     private UbhBaseShot m_parentBaseShot;
     private float m_speed;
-    private float m_angle;
+    // 앵글에 접근하기 위해 프로퍼티 사용
+    public float m_angle { get; set; }
     private float m_accelSpeed;
     private float m_accelTurn;
     private bool m_homing;
@@ -29,6 +30,9 @@ public class UbhBullet : UbhMonoBehaviour
     private float m_maxSpeed;
     private bool m_useMinSpeed;
     private float m_minSpeed;
+    public bool m_pausing { get; set; } = false;
+    public bool m_random { get; set; } = false;
+    public float m_randomangle { get; set; }
 
     private float m_baseAngle;
     private float m_selfFrameCnt;
@@ -36,7 +40,7 @@ public class UbhBullet : UbhMonoBehaviour
 
     private UbhTentacleBullet m_tentacleBullet;
 
-    private bool m_shooting;
+    public bool m_shooting { get; set; }
 
     public UbhBaseShot parentShot { get { return m_parentBaseShot; } }
 
@@ -192,6 +196,11 @@ public class UbhBullet : UbhMonoBehaviour
             }
         }
 
+        // 일시정지 토글
+        if (m_pausing) {
+            return;
+        }
+
         Vector3 myAngles = m_transformCache.rotation.eulerAngles;
 
         Quaternion newRotation = m_transformCache.rotation;
@@ -247,6 +256,23 @@ public class UbhBullet : UbhMonoBehaviour
                 }
             }
             m_selfFrameCnt += UbhTimer.instance.deltaFrameCount;
+        }
+        else if (m_random)
+        {
+            // 랜덤으로 각을 한번 바꿈
+            float addAngle = (Random.Range(0f, m_randomangle) - (m_randomangle/2f));
+            if (m_axisMove == UbhUtil.AXIS.X_AND_Z)
+            {
+                // X and Z axis
+                newRotation = Quaternion.Euler(myAngles.x, myAngles.y - addAngle, myAngles.z);
+                m_random = false;
+            }
+            else
+            {
+                // X and Y axis
+                newRotation = Quaternion.Euler(myAngles.x, myAngles.y, myAngles.z + addAngle);
+                m_random = false;
+            }
         }
         else
         {

@@ -439,7 +439,7 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 11490706, guid: 5e89e845649784c469dc3c5d82255a9e, type: 3}
       propertyPath: m_initializePoolList.Array.data[3].m_initialPoolNum
-      value: 900
+      value: 1100
       objectReference: {fileID: 0}
     - target: {fileID: 11490706, guid: 5e89e845649784c469dc3c5d82255a9e, type: 3}
       propertyPath: m_initializePoolList.Array.data[4].m_bulletPrefab

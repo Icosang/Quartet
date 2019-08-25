@@ -201,6 +201,8 @@ public sealed class UbhObjectPool : UbhSingletonMonoBehavior<UbhObjectPool>
         {
             GameObject go = Instantiate(goPrefab, transform);
             bullet = go.GetComponent<UbhBullet>();
+            // 풀에서 오브젝트가 생성될 때 표시, 기존 풀 생성이후 추가로 instatiate하는지 체크용
+            Debug.Log("Object instatiated." + go);
             if (bullet == null)
             {
                 bullet = go.AddComponent<UbhBullet>();
@@ -228,6 +230,12 @@ public sealed class UbhObjectPool : UbhSingletonMonoBehavior<UbhObjectPool>
             return;
         }
 
+        if (GetComponentInChildren<DrumPattern2>() != null)
+        {
+            GetComponentInChildren<DrumPattern2>().RideCount = 0;
+        }
+        // 랜덤화시켰던 총알 토글 끄기
+        bullet.m_random = false;
         bullet.OnFinishedShot();
 
         UbhBulletManager.instance.RemoveBullet(bullet);

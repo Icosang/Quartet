@@ -13,6 +13,7 @@ public class UbhCircleShot : UbhBaseShot
     // "Set a angle of shot. (0 to 360)"
     [Range(0f, 360f), FormerlySerializedAs("_Angle")]
     public float m_angle = 0f;
+
     public override void Shot()
     {
         if (m_bulletNum <= 0 || m_bulletSpeed <= 0f)
