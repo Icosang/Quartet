@@ -229,13 +229,9 @@ public sealed class UbhObjectPool : UbhSingletonMonoBehavior<UbhObjectPool>
         {
             return;
         }
-
-        if (GetComponentInChildren<DrumPattern2>() != null)
-        {
-            GetComponentInChildren<DrumPattern2>().RideCount = 0;
-        }
         // 랜덤화시켰던 총알 토글 끄기
         bullet.m_random = false;
+        bullet.m_randomangle = 0f;
         bullet.OnFinishedShot();
 
         UbhBulletManager.instance.RemoveBullet(bullet);

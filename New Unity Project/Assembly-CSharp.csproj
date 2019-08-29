@@ -64,9 +64,10 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BackgroundReleaser.cs" />
     <Compile Include="Assets\Scripts\Bwall.cs" />
-    <Compile Include="Assets\Scripts\EnemyPattern\DrumPattern1.cs" />
-    <Compile Include="Assets\Scripts\EnemyPattern\DrumPattern2.cs" />
-    <Compile Include="Assets\Scripts\EnemyPattern\DrumRideShockWave.cs" />
+    <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumPattern1.cs" />
+    <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumPattern2.cs" />
+    <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumPatternController.cs" />
+    <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumRideShockWave.cs" />
     <Compile Include="Assets\Scripts\Lwall.cs" />
     <Compile Include="Assets\Scripts\PlayerHitbox.cs" />
     <Compile Include="Assets\Scripts\PlayerScript.cs" />

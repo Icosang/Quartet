@@ -21,6 +21,7 @@ public class DrumRideShockWave : MonoBehaviour
             yield return new WaitForSeconds(2f);
             ShockWave.Get().StartIt(transform.position, 1f, maxRadius, 0.5f, 0.1f);
             StartCoroutine(CircleChanger());
+            yield return new WaitForSeconds(2f);
         }
     }
     IEnumerator CircleChanger()

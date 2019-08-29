@@ -48,9 +48,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52f06beddf69f3046807321ca230d190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_hp: 350
+  m_hp: 500
   m_point: 100
-  Invincible: 1
+  Invincible: 0
 --- !u!212 &943055679474236790
 SpriteRenderer:
   m_ObjectHideFlags: 0

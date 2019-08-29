@@ -135,6 +135,11 @@ public class UbhBullet : UbhMonoBehaviour
         m_minSpeed = minSpeed;
 
         m_baseAngle = 0f;
+        //드럼패턴2 한정으로 SetBullet
+        if (GetComponentInChildren<DrumPattern2>() != null)
+        {
+            GetComponentInChildren<DrumPattern2>().SetBullet();
+        }
         if (inheritAngle && m_parentBaseShot.lockOnShot == false)
         {
             if (m_axisMove == UbhUtil.AXIS.X_AND_Z)

@@ -8,9 +8,6 @@ public class DrumPattern2 : MonoBehaviour
     public int RideCount { get; set; } = 0;
     UbhBullet bullet;
 
-    void Awake() {
-        bullet = GetComponentInParent<UbhBulletSimpleSprite2d>();
-    }
 
     private void OnTriggerEnter2D(Collider2D c)
     {
@@ -30,5 +27,9 @@ public class DrumPattern2 : MonoBehaviour
                 bullet.m_randomangle = 30f;
             }
         }
+    }
+    public void SetBullet() {
+        bullet = GetComponentInParent<UbhBulletSimpleSprite2d>();
+        RideCount = 0;
     }
 }
