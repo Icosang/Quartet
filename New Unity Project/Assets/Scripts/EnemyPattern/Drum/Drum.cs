@@ -1,4 +1,4 @@
-ï»¿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,21 +17,30 @@ public class Drum : UbhEnemy
     void Awake()
     {
         pool = GameObject.FindWithTag("Pool").GetComponent<UbhObjectPool>();
-        transform.GetChild(0).gameObject.SetActive(true);
+        StartCoroutine(StartPattern());
     }
     void FixedUpdate()
     {
         if (m_hp <= 500 && (pattern.Equals(PatternState.Pattern1))){
-            transform.GetChild(0).gameObject.SetActive(false);
+            EndPattern(0);
             pool.ReleaseAllBullet();
             StartCoroutine(InvincibleTime());
-            transform.GetChild(1).gameObject.SetActive(true);
+            StartCoroutine(StartPattern(3.0f, 1));
             pattern = PatternState.Pattern2;
         }
         if (m_hp <= 0 && (pattern.Equals(PatternState.Pattern2)))
         {
-            pool.ReleaseAllBullet();
+            //3ÆÐÅÏ
         }
+    }
+    IEnumerator StartPattern(float waittime = 0f, int patternnum = 0)
+    {
+        yield return new WaitForSeconds(waittime);
+        transform.GetChild(patternnum).gameObject.SetActive(true);
+    }
+    void EndPattern(int patternnum)
+    {
+        transform.GetChild(patternnum).gameObject.SetActive(false);
     }
 
 }
