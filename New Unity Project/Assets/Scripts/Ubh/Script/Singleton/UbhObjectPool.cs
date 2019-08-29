@@ -273,7 +273,8 @@ public sealed class UbhObjectPool : UbhSingletonMonoBehavior<UbhObjectPool>
         {
             if (poolParam.m_bulletList != null)
             {
-                for (int i = 0; i < poolParam.m_bulletList.Count; i++)
+                // i = 1로 바꿔서 플레이어 불렛은 릴리즈 제외
+                for (int i = 1; i < poolParam.m_bulletList.Count; i++)
                 {
                     UbhBullet bullet = poolParam.m_bulletList[i];
                     if (bullet != null && bullet.gameObject != null && bullet.isActive)
