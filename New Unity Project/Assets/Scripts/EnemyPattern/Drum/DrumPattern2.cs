@@ -7,7 +7,13 @@ public class DrumPattern2 : MonoBehaviour
     [SerializeField]
     public int RideCount { get; set; } = 0;
     UbhBullet bullet;
+    SpriteRenderer spriteR;
+    Sprite[] sprites;
 
+    void Start() {
+        spriteR = gameObject.GetComponent<SpriteRenderer>();
+        sprites = Resources.LoadAll<Sprite>("Sprites/SmallBullets");
+    }
 
     private void OnTriggerEnter2D(Collider2D c)
     {
@@ -25,11 +31,14 @@ public class DrumPattern2 : MonoBehaviour
                 bullet.m_pausing = false;
                 bullet.m_random = true;
                 bullet.m_randomangle = 30f;
+                //랜덤으로 색변경
+                spriteR.sprite = sprites[Random.Range(0, sprites.Length)];
             }
         }
     }
     public void SetBullet() {
         bullet = GetComponentInParent<UbhBulletSimpleSprite2d>();
         RideCount = 0;
+        spriteR.sprite = sprites[4];
     }
 }

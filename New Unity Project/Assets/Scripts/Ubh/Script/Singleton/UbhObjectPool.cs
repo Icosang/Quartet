@@ -233,6 +233,7 @@ public sealed class UbhObjectPool : UbhSingletonMonoBehavior<UbhObjectPool>
         bullet.m_random = false;
         bullet.m_randomangle = 0f;
         bullet.OnFinishedShot();
+        // 드럼패턴2 색깔 초기화
 
         UbhBulletManager.instance.RemoveBullet(bullet);
 
@@ -273,8 +274,7 @@ public sealed class UbhObjectPool : UbhSingletonMonoBehavior<UbhObjectPool>
         {
             if (poolParam.m_bulletList != null)
             {
-                // i = 1로 바꿔서 플레이어 불렛은 릴리즈 제외
-                for (int i = 1; i < poolParam.m_bulletList.Count; i++)
+                for (int i = 0; i < poolParam.m_bulletList.Count; i++)
                 {
                     UbhBullet bullet = poolParam.m_bulletList[i];
                     if (bullet != null && bullet.gameObject != null && bullet.isActive)
