@@ -75,6 +75,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -544,16 +545,16 @@ MonoBehaviour:
   m_bulletPrefab: {fileID: 7703393664072653540, guid: d3c44409a18b390439405eadb7849ad9,
     type: 3}
   m_bulletNum: 24
-  m_bulletSpeed: 1.5
-  m_accelerationSpeed: 0
+  m_bulletSpeed: 2.5
+  m_accelerationSpeed: -0.1
   m_useMaxSpeed: 0
   m_maxSpeed: 0
-  m_useMinSpeed: 0
-  m_minSpeed: 0
+  m_useMinSpeed: 1
+  m_minSpeed: 1.5
   m_accelerationTurn: 0
-  m_usePauseAndResume: 0
-  m_pauseTime: 0
-  m_resumeTime: 0
+  m_usePauseAndResume: 1
+  m_pauseTime: 1
+  m_resumeTime: 2
   m_useAutoRelease: 0
   m_autoReleaseTime: 10
   m_shotFiredCallbackEvents:
@@ -590,7 +591,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   m_startAngle: 90
   m_shiftAngle: 7.5
-  m_betweenDelay: 0.2
+  m_betweenDelay: 0.05
 --- !u!1 &4759856737839669633
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,6 +908,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1016,6 +1018,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1131,16 +1134,16 @@ MonoBehaviour:
   m_bulletPrefab: {fileID: 7703393664072653540, guid: d3c44409a18b390439405eadb7849ad9,
     type: 3}
   m_bulletNum: 24
-  m_bulletSpeed: 1.5
-  m_accelerationSpeed: 0
+  m_bulletSpeed: 2.5
+  m_accelerationSpeed: -0.1
   m_useMaxSpeed: 0
   m_maxSpeed: 0
-  m_useMinSpeed: 0
-  m_minSpeed: 0
+  m_useMinSpeed: 1
+  m_minSpeed: 1.5
   m_accelerationTurn: 0
-  m_usePauseAndResume: 0
-  m_pauseTime: 0
-  m_resumeTime: 0
+  m_usePauseAndResume: 1
+  m_pauseTime: 1
+  m_resumeTime: 2
   m_useAutoRelease: 0
   m_autoReleaseTime: 10
   m_shotFiredCallbackEvents:
@@ -1166,4 +1169,4 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   m_startAngle: 270
   m_shiftAngle: -7.5
-  m_betweenDelay: 0.2
+  m_betweenDelay: 0.05
