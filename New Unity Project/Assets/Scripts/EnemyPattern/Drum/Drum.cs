@@ -21,16 +21,22 @@ public class Drum : UbhEnemy
     }
     void FixedUpdate()
     {
-        if (m_hp <= 500 && (pattern.Equals(PatternState.Pattern1))){
+        if (m_hp <= 600 && (pattern.Equals(PatternState.Pattern1))){
             EndPattern(0);
             pool.ReleaseAllBullet();
             StartCoroutine(InvincibleTime());
             StartCoroutine(StartPattern(3.0f, 1));
             pattern = PatternState.Pattern2;
         }
-        if (m_hp <= 0 && (pattern.Equals(PatternState.Pattern2)))
+        if (m_hp <= 100 && (pattern.Equals(PatternState.Pattern2)))
         {
-            //3패턴
+            EndPattern(1);
+            pool.ReleaseAllBullet();
+            //보스 반투명화, 버티기 돌입
+
+
+            StartCoroutine(StartPattern(3.0f, 2));
+            pattern = PatternState.Pattern3;
         }
     }
     IEnumerator StartPattern(float waittime = 0f, int patternnum = 0)
