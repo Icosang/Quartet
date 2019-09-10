@@ -412,7 +412,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11490706, guid: 5e89e845649784c469dc3c5d82255a9e, type: 3}
       propertyPath: m_initializePoolList.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11490706, guid: 5e89e845649784c469dc3c5d82255a9e, type: 3}
       propertyPath: m_initializePoolList.Array.data[1].m_bulletPrefab
@@ -448,11 +448,11 @@ PrefabInstance:
     - target: {fileID: 11490706, guid: 5e89e845649784c469dc3c5d82255a9e, type: 3}
       propertyPath: m_initializePoolList.Array.data[4].m_bulletPrefab
       value: 
-      objectReference: {fileID: 7703393664072653540, guid: d3c44409a18b390439405eadb7849ad9,
+      objectReference: {fileID: 7703393664072653540, guid: c41b3183af0bbfd4e91e25d2fc3d8890,
         type: 3}
     - target: {fileID: 11490706, guid: 5e89e845649784c469dc3c5d82255a9e, type: 3}
       propertyPath: m_initializePoolList.Array.data[4].m_initialPoolNum
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 11490706, guid: 5e89e845649784c469dc3c5d82255a9e, type: 3}
       propertyPath: m_initializePoolList.Array.data[5].m_bulletPrefab

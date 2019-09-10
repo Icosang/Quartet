@@ -30,9 +30,11 @@ public class UbhBullet : UbhMonoBehaviour
     private float m_maxSpeed;
     private bool m_useMinSpeed;
     private float m_minSpeed;
+    //추가한 요소들
     public bool m_pausing { get; set; } = false;
     public bool m_random { get; set; } = false;
     public float m_randomangle { get; set; }
+    public bool m_aimOnce { get; set; } = false;
 
     private float m_baseAngle;
     private float m_selfFrameCnt;
@@ -239,6 +241,10 @@ public class UbhBullet : UbhMonoBehaviour
                     // X and Y axis
                     newRotation = Quaternion.Euler(myAngles.x, myAngles.y, toAngle);
                 }
+            }
+            if (m_aimOnce) {
+                m_aimOnce = false;
+                m_homing = false;
             }
         }
         else if (m_sinWave)

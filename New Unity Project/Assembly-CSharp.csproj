@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumBullet1Sprite.cs" />
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumPattern1.cs" />
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumPattern2.cs" />
+    <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumPattern3Ride.cs" />
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumRideShockWave.cs" />
     <Compile Include="Assets\Scripts\Lwall.cs" />
     <Compile Include="Assets\Scripts\PlayerHitbox.cs" />

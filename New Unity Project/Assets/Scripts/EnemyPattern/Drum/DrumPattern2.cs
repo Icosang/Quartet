@@ -40,5 +40,6 @@ public class DrumPattern2 : MonoBehaviour
         bullet = GetComponentInParent<UbhBulletSimpleSprite2d>();
         RideCount = 0;
         spriteR.sprite = sprites[4];
+        bullet.m_pausing = false;
     }
 }
