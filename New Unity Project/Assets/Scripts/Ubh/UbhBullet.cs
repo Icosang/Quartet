@@ -13,9 +13,9 @@ public class UbhBullet : UbhMonoBehaviour
     public float m_angle { get; set; }
     private float m_accelSpeed;
     private float m_accelTurn;
-    private bool m_homing;
-    private Transform m_homingTarget;
-    private float m_homingAngleSpeed;
+    public bool m_homing { get; set; }
+    public Transform m_homingTarget { get; set; }
+    public float m_homingAngleSpeed { get; set; }
     private bool m_sinWave;
     private float m_sinWaveSpeed;
     private float m_sinWaveRangeSize;

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DrumPattern2 : BulletSetter
 {
-    [SerializeField]
     public int RideCount { get; set; } = 0;
     UbhBullet bullet;
     SpriteRenderer spriteR;

@@ -63,9 +63,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BackgroundReleaser.cs" />
+    <Compile Include="Assets\Scripts\BulletSetter.cs" />
     <Compile Include="Assets\Scripts\Bwall.cs" />
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\Drum.cs" />
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumBullet1Sprite.cs" />
+    <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumBullet5.cs" />
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumPattern1.cs" />
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumPattern2.cs" />
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumPattern3Ride.cs" />
@@ -77,7 +79,6 @@
     <Compile Include="Assets\Scripts\Shockwave\ShockWave.cs" />
     <Compile Include="Assets\Scripts\Shockwave\ShockWave_WorldSpace.cs" />
     <Compile Include="Assets\Scripts\Twall.cs" />
-    <Compile Include="Assets\Scripts\Ubh\BulletSetter.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\Attribute\UbhConditionalHideAttribute.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\Bullet\UbhTentacleBullet.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\Controller\UbhShotCtrl.cs" />
