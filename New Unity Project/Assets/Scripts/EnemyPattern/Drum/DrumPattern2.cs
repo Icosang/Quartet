@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DrumPattern2 : MonoBehaviour
+public class DrumPattern2 : BulletSetter
 {
     [SerializeField]
     public int RideCount { get; set; } = 0;
@@ -36,7 +36,7 @@ public class DrumPattern2 : MonoBehaviour
             }
         }
     }
-    public void SetBullet() {
+    public override void SetBullet() {
         bullet = GetComponentInParent<UbhBulletSimpleSprite2d>();
         RideCount = 0;
         spriteR.sprite = sprites[4];
