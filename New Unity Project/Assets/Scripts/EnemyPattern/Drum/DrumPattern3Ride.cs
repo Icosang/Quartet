@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class DrumPattern3Ride : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    void OnTriggerExit2D(Collider2D c)
 
-    // Update is called once per frame
-    void Update()
     {
-        
+        if (c.gameObject.name.Contains("DrumBullet5"))
+        {
+            UbhBullet bullet = c.transform.parent.GetComponent<UbhBulletSimpleSprite2d>();
+            
+            if (bullet != null && bullet.isActive)
+            {
+                bullet.m_pausing = true;
+            }
+
+        }
+
     }
 }

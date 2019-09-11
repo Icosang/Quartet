@@ -101,7 +101,6 @@
     <Compile Include="Assets\Scripts\Ubh\Script\ShotPattern\UbhSpiralNwayShot.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\ShotPattern\UbhSpiralShot.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\ShotPattern\UbhSpreadNwayLockOnShot.cs" />
-    <Compile Include="Assets\Scripts\Ubh\Script\ShotPattern\UbhSpreadNwayShot.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\ShotPattern\UbhWavingNwayLockOnShot.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\ShotPattern\UbhWavingNwayShot.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\Singleton\UbhBulletManager.cs" />
@@ -120,6 +119,7 @@
     <Compile Include="Assets\Scripts\Ubh\UbhMonoBehaviour.cs" />
     <Compile Include="Assets\Scripts\Ubh\UbhPlayer.cs" />
     <Compile Include="Assets\Scripts\Ubh\UbhPlayerBullet.cs" />
+    <Compile Include="Assets\Scripts\Ubh\UbhSpreadNwayShot.cs" />
     <Compile Include="Assets\ShockWave\Demos\Scripts\AlwaysFace.cs" />
     <Compile Include="Assets\ShockWave\Demos\Scripts\CreateShockWave_OnClick1.cs" />
     <Compile Include="Assets\ShockWave\Demos\Scripts\CreateShockWave_OnClick2.cs" />
