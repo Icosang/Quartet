@@ -509,7 +509,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6898518870352068236
 Transform:
   m_ObjectHideFlags: 0
@@ -658,7 +658,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5093198890117786672
 Transform:
   m_ObjectHideFlags: 0
@@ -845,7 +845,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &855999489244294148
 Transform:
   m_ObjectHideFlags: 0
@@ -1178,9 +1178,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_bulletPrefab: {fileID: 7703393664072653540, guid: 93c098d3a645e7a4c97c132d28f4c711,
     type: 3}
-  m_bulletNum: 36
+  m_bulletNum: 24
   m_bulletSpeed: 2
-  m_accelerationSpeed: 3
+  m_accelerationSpeed: 2
   m_useMaxSpeed: 0
   m_maxSpeed: 0
   m_useMinSpeed: 0
@@ -1202,7 +1202,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_startAngle: 0
-  m_shiftAngle: -10
+  m_shiftAngle: -15
   m_betweenDelay: 0
 --- !u!1 &4759856737839669633
 GameObject:
@@ -1560,7 +1560,7 @@ MonoBehaviour:
   m_axisMove: 0
   m_inheritAngle: 0
   m_startOnAwake: 1
-  m_startOnAwakeDelay: 0.2
+  m_startOnAwakeDelay: 0.5
   m_startOnEnable: 0
   m_startOnEnableDelay: 1
   m_loop: 1
@@ -1589,7 +1589,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5297219909801285830
 Transform:
   m_ObjectHideFlags: 0
@@ -2171,7 +2171,7 @@ MonoBehaviour:
     type: 3}
   m_bulletNum: 36
   m_bulletSpeed: 2
-  m_accelerationSpeed: 3
+  m_accelerationSpeed: 2
   m_useMaxSpeed: 0
   m_maxSpeed: 0
   m_useMinSpeed: 0
@@ -2193,7 +2193,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_startAngle: 180
-  m_shiftAngle: 10
+  m_shiftAngle: 15
   m_betweenDelay: 0
 --- !u!1 &8256928728006367570
 GameObject:
