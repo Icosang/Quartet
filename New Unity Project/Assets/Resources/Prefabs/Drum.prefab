@@ -2036,7 +2036,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_holeCenterAngle: 180
-  m_holeSize: 15
+  m_holeSize: 20
   m_setTargetFromTag: 1
   m_targetTagName: Player
   m_randomSelectTagTarget: 0
