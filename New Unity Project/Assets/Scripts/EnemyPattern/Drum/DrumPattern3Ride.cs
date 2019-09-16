@@ -10,10 +10,12 @@ public class DrumPattern3Ride : MonoBehaviour
         if (c.gameObject.name.Contains("DrumBullet5"))
         {
             UbhBullet bullet = c.transform.parent.GetComponent<UbhBulletSimpleSprite2d>();
-            
-            if (bullet != null && bullet.isActive)
+            DrumBullet5 bullet5 = c.transform.GetComponent<DrumBullet5>();
+
+            if (bullet != null && bullet.isActive && !bullet5.triggered)
             {
                 bullet.m_pausing = true;
+                bullet5.triggered = true;
             }
 
         }

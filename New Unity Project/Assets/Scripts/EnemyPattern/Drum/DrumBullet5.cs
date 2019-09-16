@@ -7,12 +7,14 @@ public class DrumBullet5 : BulletSetter
     UbhBullet bullet;
     public Transform m_targetTransform;
     private UbhShotCtrl m_shotCtrl;
+    public bool triggered { get; set; } = false;
 
     public override void SetBullet()
     {
         bullet = GetComponentInParent<UbhBulletSimpleSprite2d>();
         m_shotCtrl = transform.GetComponentInParent<UbhShotCtrl>();
         StartCoroutine(ResumeAndAim(1f));
+        triggered = false;
     }
 
     IEnumerator ResumeAndAim(float waittime = 0f)
