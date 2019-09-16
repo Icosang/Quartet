@@ -22,10 +22,10 @@ public class DrumBullet5 : BulletSetter
         bullet.m_pausing = false;
 
         m_targetTransform = UbhUtil.GetTransformFromTagName("Player", false, false, transform);
-        float angle = UbhUtil.GetAngleFromTwoPosition(transform, m_targetTransform, UbhUtil.AXIS.X_AND_Y);
-        bullet.m_angle = angle;
-        bullet.m_homing = true;
-        bullet.m_homingTarget = m_targetTransform;
-        bullet.m_homingAngleSpeed = 100f;
+        if (m_targetTransform != null)
+        {
+            float angle = UbhUtil.GetAngleFromTwoPosition(transform, m_targetTransform, UbhUtil.AXIS.X_AND_Y);
+            bullet.transform.SetEulerAnglesZ(angle);
+        }
     }
 }
