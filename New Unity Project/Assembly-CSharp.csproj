@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\Rwall.cs" />
     <Compile Include="Assets\Scripts\Shockwave\ShockWave.cs" />
     <Compile Include="Assets\Scripts\Shockwave\ShockWave_WorldSpace.cs" />
+    <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\Twall.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\Attribute\UbhConditionalHideAttribute.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\Bullet\UbhTentacleBullet.cs" />

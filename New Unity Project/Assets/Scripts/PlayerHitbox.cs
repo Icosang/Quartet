@@ -17,7 +17,8 @@ public class PlayerHitbox : MonoBehaviour
             if (bullet.isActive)
             {
                 UbhObjectPool.instance.ReleaseBullet(bullet);
-                Destroy(transform.parent.gameObject);
+                //Destroy(transform.parent.gameObject); // 죽음
+                SoundManager.instance.PlaySound(0);
             }
         }
         else if (colTrans.tag == "Bullet")

@@ -9,7 +9,7 @@ public class DrumPattern2 : BulletSetter
     SpriteRenderer spriteR;
     Sprite[] sprites;
 
-    void Start() {
+    void Awake() {
         spriteR = gameObject.GetComponent<SpriteRenderer>();
         sprites = Resources.LoadAll<Sprite>("Sprites/SmallBullets");
     }
