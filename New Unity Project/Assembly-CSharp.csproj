@@ -65,11 +65,13 @@
     <Compile Include="Assets\Scripts\BackgroundReleaser.cs" />
     <Compile Include="Assets\Scripts\BulletSetter.cs" />
     <Compile Include="Assets\Scripts\Bwall.cs" />
+    <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrimPattern3.cs" />
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\Drum.cs" />
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumBullet1Sprite.cs" />
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumBullet5.cs" />
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumPattern1.cs" />
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumPattern2.cs" />
+    <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumPattern3.cs" />
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumPattern3Ride.cs" />
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumRideShockWave.cs" />
     <Compile Include="Assets\Scripts\Lwall.cs" />

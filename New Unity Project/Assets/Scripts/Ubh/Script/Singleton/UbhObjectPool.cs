@@ -233,7 +233,6 @@ public sealed class UbhObjectPool : UbhSingletonMonoBehavior<UbhObjectPool>
         bullet.m_random = false;
         bullet.m_randomangle = 0f;
         bullet.OnFinishedShot();
-        // 드럼패턴2 색깔 초기화
 
         UbhBulletManager.instance.RemoveBullet(bullet);
 

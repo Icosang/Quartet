@@ -21,8 +21,10 @@ public class Drum : UbhEnemy
     }
     void FixedUpdate()
     {
-        if (m_hp <= 600 && (pattern.Equals(PatternState.Pattern1))){
-            EndPattern(0);
+        if (m_hp <= 600 && (pattern.Equals(PatternState.Pattern1)))
+        {
+            StartCoroutine(EndPattern(0));
+            SoundManager.instance.PlaySound(3);
             pool.ReleaseAllBullet();
             StartCoroutine(InvincibleTime());
             StartCoroutine(StartPattern(3.0f, 1));
@@ -30,13 +32,16 @@ public class Drum : UbhEnemy
         }
         if (m_hp <= 100 && (pattern.Equals(PatternState.Pattern2)))
         {
-            EndPattern(1);
+            StartCoroutine(EndPattern(0f, 1));
+            SoundManager.instance.PlaySound(3);
             pool.ReleaseAllBullet();
             //보스 반투명화, 버티기 돌입
-
+            Invincible = true;
+            StartCoroutine(Fade());
 
             StartCoroutine(StartPattern(3.0f, 2));
             pattern = PatternState.Pattern3;
+            StartCoroutine(EndPattern(25f, 2));
         }
     }
     IEnumerator StartPattern(float waittime = 0f, int patternnum = 0)
@@ -44,9 +49,21 @@ public class Drum : UbhEnemy
         yield return new WaitForSeconds(waittime);
         transform.GetChild(patternnum).gameObject.SetActive(true);
     }
-    void EndPattern(int patternnum)
+    IEnumerator EndPattern(float waittime = 0f, int patternnum = 0)
     {
+        yield return new WaitForSeconds(waittime);
         transform.GetChild(patternnum).gameObject.SetActive(false);
+    }
+
+    IEnumerator Fade()
+    {
+        for (float f = 1.0f ; f >= 0.4f ; f -= 0.1f)
+        {
+            var c = renderer.material.color;
+            c.a = f;
+            renderer.material.color = c;
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 
 }
