@@ -4,24 +4,21 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public AudioClip[] sounds; //재생할 소리를 변수로 담습니다.
-    AudioSource myAudio; //AudioSorce 컴포넌트를 변수로 담습니다.
-    public static SoundManager instance;  //자기자신을 변수로 담습니다.
-    void Awake() //Start보다도 먼저, 객체가 생성될때 호출됩니다
-    {
-        if (SoundManager.instance == null) //incetance가 비어있는지 검사합니다.
-        {
-            SoundManager.instance = this; //자기자신을 담습니다.
-        }
 
-        sounds = Resources.LoadAll<AudioClip>("Sounds");
-    }
-    void Start()
+    public static AudioSource[] audioSource;
+    public static Dictionary<string, AudioSource> sounds;
+
+    private void Awake()
     {
-        myAudio = this.gameObject.GetComponent<AudioSource>(); //AudioSource 오브젝트를 변수로 담습니다.
+        audioSource = GetComponents<AudioSource>();
+        sounds = new Dictionary<string, AudioSource>();
+
+        sounds.Add("DEAD", audioSource[0]);
+        sounds.Add("DEFEATED", audioSource[1]);
+        sounds.Add("SPELLCARD", audioSource[2]);
     }
-    public void PlaySound(int index)
-    {
-        myAudio.PlayOneShot(sounds[index]); //재생
-    }
+
+
+    //ex      SoundManager.sounds["Effect_Jump"].Play();
+
 }

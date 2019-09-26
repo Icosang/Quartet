@@ -5,6 +5,6 @@ using UnityEngine;
 public class DrumPattern3 : MonoBehaviour
 {
     void OnDisable() {
-        SoundManager.instance.PlaySound(1);
+        SoundManager.sounds["DEFEATED"].Play();
     }
 }
