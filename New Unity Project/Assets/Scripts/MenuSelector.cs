@@ -11,7 +11,6 @@ public class MenuSelector : MonoBehaviour
     void Awake()
     {
         menu = GameObject.FindGameObjectsWithTag("Menu");
-        transform.position = (menu[0].transform.position) - new Vector3(400, -30, 0);
     }
 
     void Update()
@@ -30,8 +29,8 @@ public class MenuSelector : MonoBehaviour
         if (index < 0) index = menu.Length - 1;
 
         if (index == menu.Length) index = 0;
-            transform.position = (menu[index].transform.position) - new Vector3(400, -30, 0);
-                if (delayTimer > 0) delayTimer -= Time.deltaTime;
+
+        if (delayTimer > 0) delayTimer -= Time.deltaTime;
 
     }
 }
