@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Playerbullet
   - Pool
+  - Menu
   layers:
   - Default
   - TransparentFX

@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumPattern3Ride.cs" />
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumRideShockWave.cs" />
     <Compile Include="Assets\Scripts\Lwall.cs" />
+    <Compile Include="Assets\Scripts\MenuSelector.cs" />
     <Compile Include="Assets\Scripts\PlayerHitbox.cs" />
     <Compile Include="Assets\Scripts\PlayerScript.cs" />
     <Compile Include="Assets\Scripts\Rwall.cs" />
@@ -85,6 +86,7 @@
     <Compile Include="Assets\Scripts\Ubh\Script\Attribute\UbhConditionalHideAttribute.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\Bullet\UbhTentacleBullet.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\Controller\UbhShotCtrl.cs" />
+    <Compile Include="Assets\Scripts\Ubh\Script\ShotPattern\test.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\ShotPattern\UbhHoleCircleLockOnShot.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\ShotPattern\UbhHoleCircleShot.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\ShotPattern\UbhHomingShot.cs" />
