@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class MenuSelector : MonoBehaviour
 {
-    GameObject[] menu;
+    [SerializeField]
+    private int menulength = 4;
     int index = 0;
     float delayTimer = 0;
     float delayTime = 0.2f;
+    Animator animator;
     void Awake()
     {
-        menu = GameObject.FindGameObjectsWithTag("Menu");
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -26,9 +28,11 @@ public class MenuSelector : MonoBehaviour
             delayTimer = delayTime;
         }
 
-        if (index < 0) index = menu.Length - 1;
+        if (index < 0) index = menulength - 1;
 
-        if (index == menu.Length) index = 0;
+        if (index == menulength) index = 0;
+
+        animator.SetInteger("Index", index);
 
         if (delayTimer > 0) delayTimer -= Time.deltaTime;
 
