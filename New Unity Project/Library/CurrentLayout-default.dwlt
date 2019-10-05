@@ -344,8 +344,8 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMin: 1
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
-    m_HSlider: 1
-    m_VSlider: 1
+    m_HSlider: 0
+    m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
@@ -358,18 +358,18 @@ MonoBehaviour:
       y: 17
       width: 426
       height: 356
-    m_Scale: {x: 0.41950724, y: 0.41950724}
-    m_Translation: {x: 173.36641, y: 177.94}
+    m_Scale: {x: 0.27734375, y: 0.27734375}
+    m_Translation: {x: 213, y: 178}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -413.26202
-      y: -424.16434
-      width: 1015.4771
-      height: 848.6147
+      x: -768
+      y: -641.8028
+      width: 1536
+      height: 1283.6056
     m_MinimalGUI: 1
   m_defaultScale: 0.27734375
   m_TargetTexture: {fileID: 0}
@@ -408,9 +408,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 2e2f0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: b0f5ffff40f7ffff48f7ffff70f7ffff4cfbffff1c3700003837000040370000e6380000f4380000b23a0000ce3a0000d63a0000
+      m_ExpandedIDs: 4cc9ffff5acbffff92cbffffbacbffff8efaffff6afbfffffa370000323800003c380000e63c0000f03c0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -465,14 +465,14 @@ MonoBehaviour:
   m_Gizmos: 1
   m_SceneIsLit: 1
   m_SceneLighting: 1
-  m_2DMode: 1
+  m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 966.87244, y: 525.1776, z: -71.838394}
+    m_Target: {x: 0, y: 0, z: 0}
     speed: 2
-    m_Value: {x: 966.87244, y: 525.1776, z: -71.838394}
+    m_Value: {x: 0, y: 0, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -493,25 +493,25 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
     yGrid:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    zGrid:
       m_Target: 1
       speed: 2
       m_Value: 1
+    zGrid:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
   m_Rotation:
-    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    m_Target: {x: 0.04612243, y: -0.04733442, z: -0.0021884756, w: -0.9978164}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: 0.0461222, y: -0.047334183, z: -0.0021884646, w: -0.9978114}
   m_Size:
-    m_Target: 495.7596
+    m_Target: 22
     speed: 2
-    m_Value: 495.7596
+    m_Value: 22
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.49748743
@@ -598,20 +598,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Sprites
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Sprites
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "D:\\\uAC9C\uAE30\uD68D\\goodmusicSTG\\New Unity Project"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a8320000
-    m_LastClickedID: 12968
-    m_ExpandedIDs: 000000003c2f00008e2f00002a300000923000006a320000c633000094340000d434000012350000a437000000ca9a3b
+    m_SelectedIDs: f2340000
+    m_LastClickedID: 13554
+    m_ExpandedIDs: 000000002c2f00007e2f00001a300000823000005c320000b83300008a340000ca34000008350000c437000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -639,7 +639,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 84}
     m_SelectedIDs: 902e0000
     m_LastClickedID: 11920
-    m_ExpandedIDs: 000000003c2f00008e2f00002a300000923000006a320000c633000094340000d434000012350000a4370000
+    m_ExpandedIDs: 000000002c2f00007e2f00001a300000823000005c320000b83300008a340000ca34000008350000c4370000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -667,7 +667,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: 8a2b00007024000000000000d02a0000762e0000e8390000
+    m_ExpandedInstanceIDs: 8a2b000070240000d02a0000762e0000e839000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

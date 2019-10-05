@@ -9,6 +9,7 @@ TagManager:
   - Playerbullet
   - Pool
   - Menu
+  - GameManager
   layers:
   - Default
   - TransparentFX

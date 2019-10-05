@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BackgroundReleaser.cs" />
+    <Compile Include="Assets\Scripts\BackgroundScroller.cs" />
     <Compile Include="Assets\Scripts\BulletSetter.cs" />
     <Compile Include="Assets\Scripts\Bwall.cs" />
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrimPattern3.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumPattern3.cs" />
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumPattern3Ride.cs" />
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumRideShockWave.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Lwall.cs" />
     <Compile Include="Assets\Scripts\MenuSelector.cs" />
     <Compile Include="Assets\Scripts\PlayerHitbox.cs" />
