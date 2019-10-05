@@ -6,12 +6,12 @@ public class BackgroundScroller : MonoBehaviour
 {
 
     // Scroll main texture based on time
-    GameObject manager;
-    [SerializeField]
-    float scrollSpeed = 0.5f;
+    GameObject obj;
+    GameManager manager;
     Renderer rend;
     void Awake() { 
-        manager = GameObject.FindWithTag("GameManager");
+        obj = GameObject.FindWithTag("GameManager");
+        manager = obj.GetComponent<GameManager>();
     }
     void Start()
     {
@@ -20,7 +20,7 @@ public class BackgroundScroller : MonoBehaviour
 
     void Update()
     {
-        float offset = Time.time * scrollSpeed;
-        rend.material.SetTextureOffset("_MainTex", new Vector2(offset, 0));
+        float offset = Time.time * (manager.scrollSpeed);
+        rend.material.SetTextureOffset("_MainTex", new Vector2(0, offset));
     }
 }
