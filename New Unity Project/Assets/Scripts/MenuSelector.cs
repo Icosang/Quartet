@@ -48,6 +48,7 @@ public class MenuSelector : MonoBehaviour
                 case 2:
                     break;
                 case 3:
+                    Application.Quit();
                     break;
             }
         }
