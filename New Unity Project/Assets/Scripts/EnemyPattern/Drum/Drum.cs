@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Drum : UbhEnemy
 {
+    GameManager manager;
     enum PatternState
     {
         Pattern1,
@@ -16,6 +17,7 @@ public class Drum : UbhEnemy
 
     void Awake()
     {
+        manager = FindObjectOfType<GameManager>();
         pool = GameObject.FindWithTag("Pool").GetComponent<UbhObjectPool>();
         StartCoroutine(StartPattern());
     }
@@ -53,6 +55,7 @@ public class Drum : UbhEnemy
     {
         yield return new WaitForSeconds(waittime);
         transform.GetChild(patternnum).gameObject.SetActive(false);
+        manager.score += 4000;
     }
 
     IEnumerator Fade()

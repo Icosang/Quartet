@@ -6,14 +6,12 @@ public class BackgroundScroller : MonoBehaviour
 {
 
     // Scroll main texture based on time
-    GameObject obj;
     GameManager manager;
     Renderer rend;
     [SerializeField]
     float mag = 1.0f;
     void Awake() { 
-        obj = GameObject.FindWithTag("GameManager");
-        manager = obj.GetComponent<GameManager>();
+        manager = FindObjectOfType<GameManager>();
     }
     void Start()
     {
