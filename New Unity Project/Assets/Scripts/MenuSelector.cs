@@ -14,6 +14,7 @@ public class MenuSelector : MonoBehaviour
     void Awake()
     {
         animator = GetComponent<Animator>();
+        SoundManager.sounds["1635"].Play();
     }
 
     void Update()
@@ -42,6 +43,7 @@ public class MenuSelector : MonoBehaviour
             switch (index) {
                 case 0:
                     SceneManager.LoadScene("DrumScene");
+                    SoundManager.sounds["1635"].Stop();
                     break;
                 case 1:
                     break;

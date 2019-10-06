@@ -8,6 +8,6 @@ public class GameManager : MonoBehaviour
     public float scrollSpeed { get; set; } = -0.5f;
     void Awake() {
         DontDestroyOnLoad(gameObject);
-        SceneManager.LoadScene("MainMenu", LoadSceneMode.Additive);
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Additive);        
     }
 }
