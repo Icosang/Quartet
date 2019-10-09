@@ -44,6 +44,6 @@ public static class D
 
     public static void SearchForBinder()
     {
-        GameObject.FindGameObjectWithTag("DBinder")?.GetComponent<DBinder>().AddBindings();
+        GameObject.FindGameObjectWithTag("GameManager")?.GetComponent<DBinder>().AddBindings();
     }
 }

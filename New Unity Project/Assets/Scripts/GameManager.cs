@@ -11,4 +11,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Additive);
     }
+    public void AddScore(int score) {
+        this.score += score;
+    }
 }

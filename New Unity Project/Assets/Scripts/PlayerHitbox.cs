@@ -18,7 +18,7 @@ public class PlayerHitbox : MonoBehaviour
             {
                 UbhObjectPool.instance.ReleaseBullet(bullet);
                 //Destroy(transform.parent.gameObject); // 죽음
-                SoundManager.sounds["DEAD"].Play();
+                D.Get<SoundManager>().sounds["DEAD"].Play();
             }
         }
         else if (colTrans.tag == "Bullet")

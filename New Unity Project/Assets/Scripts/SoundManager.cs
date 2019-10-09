@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public static AudioSource[] audioSource;
-    public static Dictionary<string, AudioSource> sounds;
+    AudioSource[] audioSource;
+    public Dictionary<string, AudioSource> sounds { get; set; }
 
     private void Awake()
     {
