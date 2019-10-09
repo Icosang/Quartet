@@ -9,7 +9,6 @@ public class SoundManager : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
         audioSource = GetComponents<AudioSource>();
         sounds = new Dictionary<string, AudioSource>();
 

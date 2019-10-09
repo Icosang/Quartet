@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
     public float scrollSpeed { get; set; } = -0.5f;
     public int score { get; set; } = 0;
     void Awake() {
-        DontDestroyOnLoad(gameObject);
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Additive);
     }
     public void AddScore(int score) {

@@ -9,7 +9,7 @@ TagManager:
   - Playerbullet
   - Pool
   - Menu
-  - GameManager
+  - DBinder
   layers:
   - Default
   - TransparentFX

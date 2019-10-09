@@ -6,6 +6,9 @@ public class DBinder : MonoBehaviour
 
     private bool bindingsAdded;
 
+    void Awake() {
+        DontDestroyOnLoad(gameObject);
+    }
     void OnValidate()
     {
         foreach (var target in bindTargets)
