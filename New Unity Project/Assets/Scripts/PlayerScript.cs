@@ -17,6 +17,7 @@ public class PlayerScript : MonoBehaviour
     public float inputX { get; set; } = 0f;
     public float inputY { get; set; } = 0f;
     Vector2 destination;
+    float MaxDistance = 20f;
     void Update()
     {
 
@@ -61,6 +62,17 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKey(KeyCode.Z) && !gameObject.GetComponent<UbhShotCtrl>().shooting)
         {
             gameObject.GetComponent<UbhShotCtrl>().StartShotRoutine();
+            Debug.DrawRay(transform.position, transform.up * MaxDistance, Color.red);
+            RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, transform.up, MaxDistance);
+            for (int i = 0; i < hits.Length; i++)
+            {
+                RaycastHit2D hit = hits[i];
+                var enemy = hit.transform.GetComponent<UbhEnemy>();
+                if (enemy != null) {
+                    enemy.HpDown(2);
+                }
+            }
+
         }
         else if (!Input.GetKey(KeyCode.Z))
         {

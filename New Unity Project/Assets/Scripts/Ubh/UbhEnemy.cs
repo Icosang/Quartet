@@ -17,33 +17,14 @@ public class UbhEnemy : UbhMonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D c)
     {
-        // *It is compared with name in order to separate as Asset from project settings.
-        //  However, it is recommended to use Layer or Tag.
-        if (c.name.Contains(NAME_PLAYER_BULLET))
-        {
-            UbhPlayerBullet playerBullet = c.transform.parent.GetComponent<UbhPlayerBullet>();
-            if (playerBullet != null && playerBullet.isActive)
-            {
-                UbhObjectPool.instance.ReleaseBullet(playerBullet);
-
-                if (!Invincible) m_hp = m_hp - playerBullet.m_power;
-
-                if (m_hp <= 0)
-                {
-
-                    Destroy(gameObject);
-                }
-                else
-                {
-                    // 적 피격모션... 필요한지?
-                }
-            }
-        }
     }
-    protected IEnumerator InvincibleTime()
+    protected IEnumerator InvincibleTime(float time)
     {
         Invincible = true;
-        yield return new WaitForSeconds(5.0f);
+        yield return new WaitForSeconds(time);
         Invincible = false;
+    }
+    public void HpDown(int down) {
+        m_hp -= down;
     }
 }

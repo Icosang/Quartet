@@ -26,7 +26,7 @@ public class Drum : UbhEnemy
             StartCoroutine(EndPattern(0));
             D.Get<SoundManager>().sounds["SPELLCARD"].Play();
             pool.ReleaseAllBullet();
-            StartCoroutine(InvincibleTime());
+            StartCoroutine(InvincibleTime(5.0f));
             StartCoroutine(StartPattern(3.0f, 1));
             pattern = PatternState.Pattern2;
         }
