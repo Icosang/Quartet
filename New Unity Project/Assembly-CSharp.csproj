@@ -63,10 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\BackgroundReleaser.cs" />
-    <Compile Include="Assets\Scripts\BackgroundScroller.cs" />
     <Compile Include="Assets\Scripts\BulletSetter.cs" />
-    <Compile Include="Assets\Scripts\Bwall.cs" />
     <Compile Include="Assets\Scripts\D.cs" />
     <Compile Include="Assets\Scripts\DBinder.cs" />
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrimPattern3.cs" />
@@ -79,16 +76,11 @@
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumPattern3Ride.cs" />
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumRideShockWave.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\Lwall.cs" />
-    <Compile Include="Assets\Scripts\MenuSelector.cs" />
     <Compile Include="Assets\Scripts\PlayerHitbox.cs" />
     <Compile Include="Assets\Scripts\PlayerScript.cs" />
-    <Compile Include="Assets\Scripts\Rwall.cs" />
-    <Compile Include="Assets\Scripts\Score.cs" />
     <Compile Include="Assets\Scripts\Shockwave\ShockWave.cs" />
     <Compile Include="Assets\Scripts\Shockwave\ShockWave_WorldSpace.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
-    <Compile Include="Assets\Scripts\Twall.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\Attribute\UbhConditionalHideAttribute.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\Bullet\UbhTentacleBullet.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\Controller\UbhShotCtrl.cs" />
@@ -133,6 +125,15 @@
     <Compile Include="Assets\Scripts\Ubh\UbhPlayer.cs" />
     <Compile Include="Assets\Scripts\Ubh\UbhPlayerBullet.cs" />
     <Compile Include="Assets\Scripts\Ubh\UbhSpreadNwayShot.cs" />
+    <Compile Include="Assets\Scripts\UI\BackgroundReleaser.cs" />
+    <Compile Include="Assets\Scripts\UI\BackgroundScroller.cs" />
+    <Compile Include="Assets\Scripts\UI\Bwall.cs" />
+    <Compile Include="Assets\Scripts\UI\Life.cs" />
+    <Compile Include="Assets\Scripts\UI\Lwall.cs" />
+    <Compile Include="Assets\Scripts\UI\MenuSelector.cs" />
+    <Compile Include="Assets\Scripts\UI\Rwall.cs" />
+    <Compile Include="Assets\Scripts\UI\Score.cs" />
+    <Compile Include="Assets\Scripts\UI\Twall.cs" />
     <Compile Include="Assets\ShockWave\Demos\Scripts\AlwaysFace.cs" />
     <Compile Include="Assets\ShockWave\Demos\Scripts\CreateShockWave_OnClick1.cs" />
     <Compile Include="Assets\ShockWave\Demos\Scripts\CreateShockWave_OnClick2.cs" />
