@@ -18,6 +18,10 @@ public class PlayerScript : MonoBehaviour
     public float inputY { get; set; } = 0f;
     Vector2 destination;
     float MaxDistance = 20f;
+
+    float delayTimer = 0;
+    float delayTime = 0.15f;
+
     void Update()
     {
 
@@ -59,18 +63,24 @@ public class PlayerScript : MonoBehaviour
     }
     void FixedUpdate() {
         // 5 - Shooting  
-        if (Input.GetKey(KeyCode.Z) && !gameObject.GetComponent<UbhShotCtrl>().shooting)
+        if (Input.GetKey(KeyCode.Z))
         {
-            gameObject.GetComponent<UbhShotCtrl>().StartShotRoutine();
-            Debug.DrawRay(transform.position, transform.up * MaxDistance, Color.red);
-            RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, transform.up, MaxDistance);
-            for (int i = 0; i < hits.Length; i++)
+            if(!gameObject.GetComponent<UbhShotCtrl>().shooting) gameObject.GetComponent<UbhShotCtrl>().StartShotRoutine();
+            if (delayTimer <= 0)
             {
-                RaycastHit2D hit = hits[i];
-                var enemy = hit.transform.GetComponent<UbhEnemy>();
-                if (enemy != null) {
-                    enemy.HpDown(2);
+                Debug.DrawRay(transform.position, transform.up * MaxDistance, Color.red);
+                RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, transform.up, MaxDistance);
+                for (int i = 0; i < hits.Length; i++)
+                {
+                    RaycastHit2D hit = hits[i];
+                    var enemy = hit.transform.GetComponent<UbhEnemy>();
+                    if (enemy != null)
+                    {
+                        enemy.HpDown(1);
+                    }
                 }
+
+                delayTimer = delayTime;
             }
 
         }
@@ -78,5 +88,7 @@ public class PlayerScript : MonoBehaviour
         {
             gameObject.GetComponent<UbhShotCtrl>().StopShotRoutine();
         }
+
+        if (delayTimer > 0) delayTimer -= Time.deltaTime;
     }
 }
