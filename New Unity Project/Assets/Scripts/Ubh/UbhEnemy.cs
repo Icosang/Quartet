@@ -5,8 +5,6 @@ public class UbhEnemy : UbhMonoBehaviour
 {
     public const string NAME_PLAYER = "Player";
     public const string NAME_PLAYER_BULLET = "PlayerBullet";
-
-    private const string ANIM_DAMAGE_TRIGGER = "Damage";
     [SerializeField, FormerlySerializedAs("_Hp")]
     protected int m_hp = 1;
     // 포인트. 나중에 시스템에 추가할 것
@@ -17,6 +15,14 @@ public class UbhEnemy : UbhMonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D c)
     {
+        if (c.tag == "Playerbullet")
+        {
+            UbhPlayerBullet playerBullet = c.transform.parent.GetComponent<UbhPlayerBullet>();
+            if (playerBullet != null && playerBullet.isActive)
+            {
+                UbhObjectPool.instance.ReleaseBullet(playerBullet);
+            }
+        }
     }
     protected IEnumerator InvincibleTime(float time)
     {
@@ -25,6 +31,6 @@ public class UbhEnemy : UbhMonoBehaviour
         Invincible = false;
     }
     public void HpDown(int down) {
-        m_hp -= down;
+        if(!Invincible) m_hp -= down;
     }
 }
