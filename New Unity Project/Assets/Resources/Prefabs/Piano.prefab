@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 548576095833921720}
   - component: {fileID: 548576095833921721}
+  - component: {fileID: 10130757548871143}
   m_Layer: 0
   m_Name: LinearShot
   m_TagString: Untagged
@@ -65,6 +66,18 @@ MonoBehaviour:
       m_Calls: []
   m_angle: 0
   m_betweenDelay: 0.15
+--- !u!114 &10130757548871143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548576094116867738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b78ead1d389ad847b0736e92052f767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &548576095128827076
 GameObject:
   m_ObjectHideFlags: 0
@@ -75,6 +88,7 @@ GameObject:
   m_Component:
   - component: {fileID: 548576095128827077}
   - component: {fileID: 548576095128827074}
+  - component: {fileID: 90849764267172808}
   m_Layer: 0
   m_Name: LinearShot (1)
   m_TagString: Untagged
@@ -130,6 +144,18 @@ MonoBehaviour:
       m_Calls: []
   m_angle: 0
   m_betweenDelay: 0.15
+--- !u!114 &90849764267172808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548576095128827076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b78ead1d389ad847b0736e92052f767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &548576095690704659
 GameObject:
   m_ObjectHideFlags: 0

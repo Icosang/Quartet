@@ -119,6 +119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_hp: 1000
   m_point: 100
+  collider: {fileID: 5388409036385886008}
 --- !u!212 &943055679474236790
 SpriteRenderer:
   m_ObjectHideFlags: 0

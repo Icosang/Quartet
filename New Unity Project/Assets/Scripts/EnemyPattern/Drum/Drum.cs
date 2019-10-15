@@ -12,8 +12,8 @@ public class Drum : UbhEnemy
     }
     PatternState pattern = PatternState.Pattern1;
     UbhObjectPool pool;
-
-
+    [SerializeField]
+    Collider2D collider;
     void Awake()
     {
         pool = GameObject.FindWithTag("Pool").GetComponent<UbhObjectPool>();
@@ -58,6 +58,7 @@ public class Drum : UbhEnemy
 
     IEnumerator Fade()
     {
+        collider.enabled = false;
         for (float f = 1.0f ; f >= 0.4f ; f -= 0.1f)
         {
             var c = renderer.material.color;
