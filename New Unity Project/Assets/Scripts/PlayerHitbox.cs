@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHitbox : MonoBehaviour
 {
@@ -22,6 +23,10 @@ public class PlayerHitbox : MonoBehaviour
                 D.Get<SoundManager>().sounds["DEAD"].Play();
                 if (D.Get<GameManager>().life == 1) {
                     Destroy(transform.parent.gameObject); // 죽음
+                    D.Get<GameManager>().life = 4; // 목숨 초기화
+                    D.Get<GameManager>().score = 0; // 스코어 저장 후 초기화
+                    Time.timeScale = 0;
+                    SceneManager.LoadScene("GameOver"); // 게임오버씬 호출
                     return;
                 }
                 D.Get<GameManager>().life -= 1;

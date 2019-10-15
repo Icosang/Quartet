@@ -21,7 +21,7 @@ public class LinearShooter : MonoBehaviour
                     var enemy = hit.transform.GetComponent<UbhEnemy>();
                     if (enemy != null)
                     {
-                        enemy.HpDown(1);
+                        enemy.HpDown(1.5f);
                     }
                 }
 

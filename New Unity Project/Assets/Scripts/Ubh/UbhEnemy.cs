@@ -6,7 +6,7 @@ public class UbhEnemy : UbhMonoBehaviour
     public const string NAME_PLAYER = "Player";
     public const string NAME_PLAYER_BULLET = "PlayerBullet";
     [SerializeField, FormerlySerializedAs("_Hp")]
-    protected int m_hp = 1;
+    protected float m_hp = 1000;
     // 포인트. 나중에 시스템에 추가할 것
     [SerializeField, FormerlySerializedAs("_Point")]
     private int m_point = 100;
@@ -30,7 +30,7 @@ public class UbhEnemy : UbhMonoBehaviour
         yield return new WaitForSeconds(time);
         Invincible = false;
     }
-    public void HpDown(int down) {
+    public void HpDown(float down) {
         if(!Invincible) m_hp -= down;
     }
 }

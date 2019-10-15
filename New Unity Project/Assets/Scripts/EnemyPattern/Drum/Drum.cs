@@ -13,7 +13,7 @@ public class Drum : UbhEnemy
     PatternState pattern = PatternState.Pattern1;
     UbhObjectPool pool;
     [SerializeField]
-    Collider2D collider;
+    Collider2D collider = null;
     void Awake()
     {
         pool = GameObject.FindWithTag("Pool").GetComponent<UbhObjectPool>();
