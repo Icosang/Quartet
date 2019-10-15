@@ -7,7 +7,7 @@ public class PlayerHitbox : MonoBehaviour
     bool isInvincible = false;
     [SerializeField]
     SpriteRenderer renderer = null;
-    private void OnTriggerEnter2D(Collider2D c)
+    private void OnTriggerStay2D(Collider2D c)
     {
         HitCheck(c.transform);
     }
@@ -26,7 +26,7 @@ public class PlayerHitbox : MonoBehaviour
                     D.Get<GameManager>().life = 4; // 목숨 초기화
                     D.Get<GameManager>().score = 0; // 스코어 저장 후 초기화
                     Time.timeScale = 0;
-                    SceneManager.LoadScene("GameOver"); // 게임오버씬 호출
+                    SceneManager.LoadScene("GameOver", LoadSceneMode.Additive); // 게임오버씬 호출
                     return;
                 }
                 D.Get<GameManager>().life -= 1;
