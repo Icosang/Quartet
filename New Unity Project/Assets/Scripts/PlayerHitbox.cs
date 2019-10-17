@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class PlayerHitbox : MonoBehaviour
 {
     bool isInvincible = false;
+    GameManager manager = D.Get<GameManager>();
     [SerializeField]
     SpriteRenderer renderer = null;
     private void OnTriggerStay2D(Collider2D c)
@@ -21,11 +22,11 @@ public class PlayerHitbox : MonoBehaviour
             {
                 UbhObjectPool.instance.ReleaseBullet(bullet);
                 D.Get<SoundManager>().sounds["DEAD"].Play();
-                if (D.Get<GameManager>().life == 1) {
+                if (manager.life == 1) {
                     Destroy(transform.parent.gameObject); // 죽음
-                    D.Get<GameManager>().life = 4; // 목숨 초기화
-                    D.Get<GameManager>().score = 0; // 스코어 저장 후 초기화
-                    Time.timeScale = 0;
+                    manager.score = 0; // 스코어 저장 후 초기화
+                    manager.scrollSpeed = 0f; // 배경스크롤정지
+                    D.Get<UbhTimer>().Pause(); // 탄막 정지
                     SceneManager.LoadScene("GameOver", LoadSceneMode.Additive); // 게임오버씬 호출
                     return;
                 }
