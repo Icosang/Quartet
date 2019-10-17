@@ -44,18 +44,7 @@ public class Drum : UbhEnemy
             StartCoroutine(EndPattern(25f, 2, 4000));
             manager.AddScore((int)m_hp * 10);
         }
-    }
-    IEnumerator StartPattern(float waittime = 0f, int patternnum = 0)
-    {
-        yield return new WaitForSeconds(waittime);
-        transform.GetChild(patternnum).gameObject.SetActive(true);
-    }
-    IEnumerator EndPattern(float waittime, int patternnum, int patternscore)
-    {
-        yield return new WaitForSeconds(waittime);
-        transform.GetChild(patternnum).gameObject.SetActive(false);
-        manager.AddScore(patternscore);
-    }
+    } 
 
     IEnumerator Fade()
     {

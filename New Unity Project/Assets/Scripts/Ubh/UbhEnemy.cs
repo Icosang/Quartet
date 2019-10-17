@@ -6,14 +6,16 @@ public class UbhEnemy : UbhMonoBehaviour
     protected GameManager manager = D.Get<GameManager>();
     public const string NAME_PLAYER = "Player";
     public const string NAME_PLAYER_BULLET = "PlayerBullet";
+    float timer = 0f;
     [SerializeField, FormerlySerializedAs("_Hp")]
     protected float m_hp = 1000;
-    // 포인트. 나중에 시스템에 추가할 것
-    [SerializeField, FormerlySerializedAs("_Point")]
-    private int m_point = 100;
     //무적
     public bool Invincible { get; set; } = false;
 
+    private void FixedUpdate()
+    {
+        timer += Time.deltaTime; 
+    }
     private void OnTriggerEnter2D(Collider2D c)
     {
         if (c.tag == "Playerbullet")
@@ -35,7 +37,20 @@ public class UbhEnemy : UbhMonoBehaviour
         if (!Invincible)
         {
             m_hp -= down;
-            manager.AddScore((int)down * 10);
+            manager.AddScore((int)(down * 10));
         }
+    }
+    protected IEnumerator StartPattern(float waittime = 0f, int patternnum = 0)
+    {
+        yield return new WaitForSeconds(waittime);
+        transform.GetChild(patternnum).gameObject.SetActive(true);
+        timer = 0f;
+    }
+    protected IEnumerator EndPattern(float waittime, int patternnum, int patternscore)
+    {
+        yield return new WaitForSeconds(waittime);
+        transform.GetChild(patternnum).gameObject.SetActive(false);
+        manager.AddScore(patternscore);
+        manager.AddScore((int)(patternscore / (timer / 10f)));
     }
 }
