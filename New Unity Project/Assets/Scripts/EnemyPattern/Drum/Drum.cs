@@ -23,7 +23,7 @@ public class Drum : UbhEnemy
     {
         if (m_hp <= 600 && (pattern.Equals(PatternState.Pattern1)))
         {
-            StartCoroutine(EndPattern(0));
+            StartCoroutine(EndPattern(0f, 0, 3000));
             D.Get<SoundManager>().sounds["SPELLCARD"].Play();
             pool.ReleaseAllBullet();
             StartCoroutine(InvincibleTime(5.0f));
@@ -32,7 +32,7 @@ public class Drum : UbhEnemy
         }
         if (m_hp <= 100 && (pattern.Equals(PatternState.Pattern2)))
         {
-            StartCoroutine(EndPattern(0f, 1));
+            StartCoroutine(EndPattern(0f, 1, 3000));
             D.Get<SoundManager>().sounds["SPELLCARD"].Play();
             pool.ReleaseAllBullet();
             //보스 반투명화, 버티기 돌입
@@ -41,7 +41,8 @@ public class Drum : UbhEnemy
 
             StartCoroutine(StartPattern(3.0f, 2));
             pattern = PatternState.Pattern3;
-            StartCoroutine(EndPattern(25f, 2));
+            StartCoroutine(EndPattern(25f, 2, 4000));
+            manager.AddScore((int)m_hp * 10);
         }
     }
     IEnumerator StartPattern(float waittime = 0f, int patternnum = 0)
@@ -49,11 +50,11 @@ public class Drum : UbhEnemy
         yield return new WaitForSeconds(waittime);
         transform.GetChild(patternnum).gameObject.SetActive(true);
     }
-    IEnumerator EndPattern(float waittime = 0f, int patternnum = 0)
+    IEnumerator EndPattern(float waittime, int patternnum, int patternscore)
     {
         yield return new WaitForSeconds(waittime);
         transform.GetChild(patternnum).gameObject.SetActive(false);
-        D.Get<GameManager>().AddScore(4000);
+        manager.AddScore(patternscore);
     }
 
     IEnumerator Fade()

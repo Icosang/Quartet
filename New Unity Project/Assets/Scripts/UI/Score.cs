@@ -7,7 +7,7 @@ public class Score : MonoBehaviour
     Text scoreText = null;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
        scoreText.text = D.Get<GameManager>().score.ToString("D12");
     }

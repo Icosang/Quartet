@@ -3,6 +3,7 @@ using UnityEngine.Serialization;
 using System.Collections;
 public class UbhEnemy : UbhMonoBehaviour
 {
+    protected GameManager manager = D.Get<GameManager>();
     public const string NAME_PLAYER = "Player";
     public const string NAME_PLAYER_BULLET = "PlayerBullet";
     [SerializeField, FormerlySerializedAs("_Hp")]
@@ -31,6 +32,10 @@ public class UbhEnemy : UbhMonoBehaviour
         Invincible = false;
     }
     public void HpDown(float down) {
-        if(!Invincible) m_hp -= down;
+        if (!Invincible)
+        {
+            m_hp -= down;
+            manager.AddScore((int)down * 10);
+        }
     }
 }
