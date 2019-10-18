@@ -5,9 +5,14 @@ using UnityEngine.SceneManagement;
 public class PlayerHitbox : MonoBehaviour
 {
     bool isInvincible = false;
-    GameManager manager = D.Get<GameManager>();
+    GameManager manager;
     [SerializeField]
     SpriteRenderer renderer = null;
+
+    private void Start()
+    {
+        manager = D.Get<GameManager>();
+    }
     private void OnTriggerStay2D(Collider2D c)
     {
         HitCheck(c.transform);

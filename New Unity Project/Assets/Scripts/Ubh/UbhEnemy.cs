@@ -3,7 +3,7 @@ using UnityEngine.Serialization;
 using System.Collections;
 public class UbhEnemy : UbhMonoBehaviour
 {
-    protected GameManager manager = D.Get<GameManager>();
+    protected GameManager manager;
     public const string NAME_PLAYER = "Player";
     public const string NAME_PLAYER_BULLET = "PlayerBullet";
     float timer = 0f;
@@ -12,6 +12,10 @@ public class UbhEnemy : UbhMonoBehaviour
     //무적
     public bool Invincible { get; set; } = false;
 
+    private void Start()
+    {
+        manager = D.Get<GameManager>();
+    }
     private void FixedUpdate()
     {
         timer += Time.deltaTime; 

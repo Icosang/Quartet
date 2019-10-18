@@ -14,7 +14,7 @@ public class Drum : UbhEnemy
     UbhObjectPool pool;
     [SerializeField]
     Collider2D collider = null;
-    void Awake()
+    void Start()
     {
         pool = GameObject.FindWithTag("Pool").GetComponent<UbhObjectPool>();
         StartCoroutine(StartPattern());

@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public int score { get; set; } = 0;
     public int life { get; set; } = 4;
     void Awake() {
-        SceneManager.LoadScene("MainMenu", LoadSceneMode.Additive);
+        //SceneManager.LoadScene("MainMenu", LoadSceneMode.Additive);
     }
     public void AddScore(int score) {
         this.score += score;
