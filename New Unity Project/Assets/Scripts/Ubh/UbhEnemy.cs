@@ -11,11 +11,12 @@ public class UbhEnemy : UbhMonoBehaviour
     protected float m_hp = 1000;
     //무적
     public bool Invincible { get; set; } = false;
-
-    private void Start()
+    
+    protected virtual void Start()
     {
-        manager = D.Get<GameManager>();
+       manager = D.Get<GameManager>();
     }
+
     private void FixedUpdate()
     {
         timer += Time.deltaTime; 

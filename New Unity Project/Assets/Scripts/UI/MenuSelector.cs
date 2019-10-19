@@ -9,7 +9,7 @@ public class MenuSelector : MonoBehaviour
     float delayTimer = 0;
     float delayTime = 0.2f;
     Animator animator;
-    void Awake()
+    void Start()
     {
         animator = GetComponent<Animator>();
         D.Get<SoundManager>().sounds["1635"].Play();

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Drum : UbhEnemy
@@ -14,9 +13,11 @@ public class Drum : UbhEnemy
     UbhObjectPool pool;
     [SerializeField]
     Collider2D collider = null;
-    void Start()
+
+    protected override void Start()
     {
-        pool = GameObject.FindWithTag("Pool").GetComponent<UbhObjectPool>();
+        base.Start();
+        pool = D.Get<UbhObjectPool>();
         StartCoroutine(StartPattern());
     }
     void FixedUpdate()
