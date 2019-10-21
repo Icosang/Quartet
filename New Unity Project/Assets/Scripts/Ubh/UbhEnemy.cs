@@ -6,6 +6,7 @@ public class UbhEnemy : UbhMonoBehaviour
     protected GameManager manager;
     public const string NAME_PLAYER = "Player";
     public const string NAME_PLAYER_BULLET = "PlayerBullet";
+    [SerializeField]
     float timer = 0f;
     [SerializeField, FormerlySerializedAs("_Hp")]
     protected float m_hp = 1000;
@@ -17,7 +18,7 @@ public class UbhEnemy : UbhMonoBehaviour
        manager = D.Get<GameManager>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         timer += Time.deltaTime; 
     }
@@ -42,7 +43,7 @@ public class UbhEnemy : UbhMonoBehaviour
         if (!Invincible)
         {
             m_hp -= down;
-            manager.AddScore((int)(down * 10));
+            manager.AddScore((long)(down * 10));
         }
     }
     protected IEnumerator StartPattern(float waittime = 0f, int patternnum = 0)
@@ -50,12 +51,20 @@ public class UbhEnemy : UbhMonoBehaviour
         yield return new WaitForSeconds(waittime);
         transform.GetChild(patternnum).gameObject.SetActive(true);
         timer = 0f;
+        manager.timebonus = true;
     }
-    protected IEnumerator EndPattern(float waittime, int patternnum, int patternscore)
+    protected IEnumerator EndPattern(float waittime, int patternnum, long patternscore, float bonustime, bool dodgeonly = false)
     {
         yield return new WaitForSeconds(waittime);
         transform.GetChild(patternnum).gameObject.SetActive(false);
         manager.AddScore(patternscore);
-        manager.AddScore((int)(patternscore / (timer / 10f)));
+        if (manager.timebonus)
+        {
+            if (dodgeonly)
+            {
+                manager.AddScore(patternscore * 3 / 2);
+            }
+            else manager.AddScore(patternscore + (long)(patternscore * ((bonustime - timer) / bonustime)));
+        }
     }
 }

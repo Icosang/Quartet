@@ -35,7 +35,8 @@ public class PlayerHitbox : MonoBehaviour
                     SceneManager.LoadScene("GameOver", LoadSceneMode.Additive); // 게임오버씬 호출
                     return;
                 }
-                D.Get<GameManager>().life -= 1;
+                manager.life -= 1;
+                manager.timebonus = false;
                 isInvincible = true;
                 StartCoroutine(PlayerInvincible(50));
             }
