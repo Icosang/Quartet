@@ -10,15 +10,14 @@ public class Drum : UbhEnemy
         Pattern3
     }
     PatternState pattern = PatternState.Pattern1;
-    UbhObjectPool pool;
     [SerializeField]
     Collider2D collider = null;
 
     protected override void Start()
     {
         base.Start();
-        pool = D.Get<UbhObjectPool>();
         StartCoroutine(StartPattern());
+        soundManager.sounds["Bunnyhop"].Play();
     }
     void FixedUpdate()
     {

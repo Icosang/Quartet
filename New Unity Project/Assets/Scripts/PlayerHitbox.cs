@@ -6,12 +6,16 @@ public class PlayerHitbox : MonoBehaviour
 {
     bool isInvincible = false;
     GameManager manager;
+    SoundManager soundManager;
+    UbhTimer timer;
     [SerializeField]
     SpriteRenderer renderer = null;
 
     private void Start()
     {
         manager = D.Get<GameManager>();
+        soundManager = D.Get<SoundManager>();
+        timer = D.Get<UbhTimer>();
     }
     private void OnTriggerStay2D(Collider2D c)
     {
@@ -26,12 +30,12 @@ public class PlayerHitbox : MonoBehaviour
             if (bullet.isActive)
             {
                 UbhObjectPool.instance.ReleaseBullet(bullet);
-                D.Get<SoundManager>().sounds["DEAD"].Play();
+                soundManager.sounds["DEAD"].Play();
                 if (manager.life == 1) {
                     Destroy(transform.parent.gameObject); // 죽음
                     manager.score = 0; // 스코어 저장 후 초기화
                     manager.scrollSpeed = 0f; // 배경스크롤정지
-                    D.Get<UbhTimer>().Pause(); // 탄막 정지
+                    timer.Pause(); // 탄막 정지
                     SceneManager.LoadScene("GameOver", LoadSceneMode.Additive); // 게임오버씬 호출
                     return;
                 }

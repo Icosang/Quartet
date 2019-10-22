@@ -4,6 +4,8 @@ using System.Collections;
 public class UbhEnemy : UbhMonoBehaviour
 {
     protected GameManager manager;
+    protected UbhObjectPool pool;
+    protected SoundManager soundManager;
     Timebonus bonus;
     public const string NAME_PLAYER = "Player";
     public const string NAME_PLAYER_BULLET = "PlayerBullet";
@@ -18,6 +20,8 @@ public class UbhEnemy : UbhMonoBehaviour
     {
        manager = D.Get<GameManager>();
         bonus = D.Get<Timebonus>();
+        pool = D.Get<UbhObjectPool>();
+        soundManager = D.Get<SoundManager>();
     }
 
     private void Update()

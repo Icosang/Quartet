@@ -16,6 +16,7 @@ public class SoundManager : MonoBehaviour
         sounds.Add("DEFEATED", audioSource[1]);
         sounds.Add("SPELLCARD", audioSource[2]);
         sounds.Add("1635", audioSource[3]);
+        sounds.Add("Bunnyhop", audioSource[4]);
     }
 
 
