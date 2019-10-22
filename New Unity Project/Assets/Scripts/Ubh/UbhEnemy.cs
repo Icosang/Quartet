@@ -4,6 +4,7 @@ using System.Collections;
 public class UbhEnemy : UbhMonoBehaviour
 {
     protected GameManager manager;
+    Timebonus bonus;
     public const string NAME_PLAYER = "Player";
     public const string NAME_PLAYER_BULLET = "PlayerBullet";
     [SerializeField]
@@ -16,6 +17,7 @@ public class UbhEnemy : UbhMonoBehaviour
     protected virtual void Start()
     {
        manager = D.Get<GameManager>();
+        bonus = D.Get<Timebonus>();
     }
 
     private void Update()
@@ -58,13 +60,14 @@ public class UbhEnemy : UbhMonoBehaviour
         yield return new WaitForSeconds(waittime);
         transform.GetChild(patternnum).gameObject.SetActive(false);
         manager.AddScore(patternscore);
+        //타임보너스
         if (manager.timebonus)
         {
-            if (dodgeonly)
-            {
-                manager.AddScore(patternscore * 3 / 2);
-            }
-            else manager.AddScore(patternscore + (long)(patternscore * ((bonustime - timer) / bonustime)));
+            long timebonus;
+            if (dodgeonly) timebonus = patternscore * 3 / 2;
+            else timebonus = patternscore + (long)(patternscore * ((bonustime - timer) / bonustime));
+            manager.AddScore(timebonus);
+            bonus.ScoreView(timebonus);
         }
     }
 }
