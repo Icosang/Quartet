@@ -407,24 +407,24 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 13}
-      m_SelectedIDs: 38f9ffff
-      m_LastClickedID: -1736
-      m_ExpandedIDs: 60f7ffffe4f8ffff38f9ffff9ef9ffff16fbfffffa3900003a3a00003e3a0000
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 48a1ffff4ca2ffff72a7ffff6afbfffff4ffffff9c3a0000bc3a0000183b0000103c0000303c00008e3c0000ea420000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: BossHp
-        m_OriginalName: BossHp
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -1736
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -470,9 +470,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 982, y: 839, z: 0}
+    m_Target: {x: 1349.9915, y: 1001.8575, z: -63.55503}
     speed: 2
-    m_Value: {x: 982.0003, y: 839.00006, z: -0.0000072794155}
+    m_Value: {x: 1349.9915, y: 1001.8575, z: -63.55503}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -503,11 +503,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.15949376, y: -0.012736941, z: -0.0020584892, w: -0.98712}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: 0.15949292, y: -0.012736874, z: -0.0020584785, w: -0.9871148}
   m_Size:
-    m_Target: 1603.1335
+    m_Target: 221.36795
     speed: 2
-    m_Value: 1678.6738
+    m_Value: 231.7989
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -598,34 +598,34 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Sprites
+    - Assets/Resources/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Sprites
+  - Assets/Resources/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "D:\\\uAC9C\uAE30\uD68D\\goodmusicSTG\\New Unity Project"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 15}
-    m_SelectedIDs: e8320000
-    m_LastClickedID: 13032
-    m_ExpandedIDs: 00000000702f0000c62f000062300000ca300000a43200009433000006340000dc3400001a350000ce350000c439000000ca9a3b
+    m_SelectedIDs: 1c350000
+    m_LastClickedID: 13596
+    m_ExpandedIDs: 000000004a2f0000a02f00003c300000a43000007e3200006e330000e0330000b6340000f4340000a8350000a839000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Scenes
+      m_OriginalName: Scenes
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 13596
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_SearchString: 
@@ -639,7 +639,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 84}
     m_SelectedIDs: 902e0000
     m_LastClickedID: 11920
-    m_ExpandedIDs: 00000000702f0000c62f000062300000ca300000a43200009433000006340000dc3400001a350000ce350000c4390000
+    m_ExpandedIDs: 000000004a2f0000a02f00003c300000a43000007e3200006e330000e0330000b6340000f4340000a8350000a8390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

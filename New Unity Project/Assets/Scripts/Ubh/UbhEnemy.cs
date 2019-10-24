@@ -13,6 +13,7 @@ public class UbhEnemy : UbhMonoBehaviour
     float timer = 0f;
     [SerializeField, FormerlySerializedAs("_Hp")]
     protected float m_hp = 1000;
+    protected float maxhp;
     //무적
     public bool Invincible { get; set; } = false;
     
@@ -22,6 +23,7 @@ public class UbhEnemy : UbhMonoBehaviour
         bonus = D.Get<Timebonus>();
         pool = D.Get<UbhObjectPool>();
         soundManager = D.Get<SoundManager>();
+        maxhp = m_hp;
     }
 
     private void Update()

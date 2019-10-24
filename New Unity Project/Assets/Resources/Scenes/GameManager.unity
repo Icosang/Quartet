@@ -806,6 +806,7 @@ GameObject:
   m_Component:
   - component: {fileID: 694177280}
   - component: {fileID: 694177282}
+  - component: {fileID: 694177283}
   - component: {fileID: 694177281}
   m_Layer: 0
   m_Name: HpBar
@@ -869,6 +870,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 694177279}
   m_CullTransparentMesh: 0
+--- !u!114 &694177283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694177279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32e8002dbb41dae4d9488bd1c19f5968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  t: {fileID: 694177280}
 --- !u!1 &840151824
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,7 +899,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!20 &840151825
 Camera:
   m_ObjectHideFlags: 0
@@ -2100,7 +2114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1321710145
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2164,6 +2178,7 @@ MonoBehaviour:
   - {fileID: 195825867}
   - {fileID: 1848648442}
   - {fileID: 242372784}
+  - {fileID: 694177283}
 --- !u!4 &1538442172
 Transform:
   m_ObjectHideFlags: 0

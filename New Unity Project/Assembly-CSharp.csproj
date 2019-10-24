@@ -77,6 +77,7 @@
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumPattern3Ride.cs" />
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumRideShockWave.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\HpBarController.cs" />
     <Compile Include="Assets\Scripts\LinearShooter.cs" />
     <Compile Include="Assets\Scripts\PlayerHitbox.cs" />
     <Compile Include="Assets\Scripts\PlayerScript.cs" />

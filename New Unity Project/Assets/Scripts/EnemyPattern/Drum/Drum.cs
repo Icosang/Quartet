@@ -12,15 +12,21 @@ public class Drum : UbhEnemy
     PatternState pattern = PatternState.Pattern1;
     [SerializeField]
     Collider2D collider = null;
+    HpBarController hp;
 
     protected override void Start()
     {
         base.Start();
         StartCoroutine(StartPattern());
         soundManager.sounds["Bunnyhop"].Play();
+        hp = D.Get<HpBarController>();
     }
     void FixedUpdate()
     {
+        //체력바관리
+        hp.Scaling(m_hp/maxhp);
+
+        //패턴
         if (m_hp <= 600 && (pattern.Equals(PatternState.Pattern1)))
         {
             StartCoroutine(EndPattern(0f, 0, 300000, 50));
