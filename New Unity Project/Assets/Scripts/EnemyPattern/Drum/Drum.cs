@@ -13,6 +13,7 @@ public class Drum : UbhEnemy
     [SerializeField]
     Collider2D collider = null;
     HpBarController hp;
+    CanvasController cc;
 
     protected override void Start()
     {
@@ -20,6 +21,7 @@ public class Drum : UbhEnemy
         StartCoroutine(StartPattern());
         soundManager.sounds["Bunnyhop"].Play();
         hp = D.Get<HpBarController>();
+        cc = D.Get<CanvasController>();
     }
     void FixedUpdate()
     {
@@ -48,7 +50,10 @@ public class Drum : UbhEnemy
             StartCoroutine(StartPattern(3.0f, 2));
             pattern = PatternState.Pattern3;
             StartCoroutine(EndPattern(25f, 2, 400000, 0, true));
+            // 마지막패턴 후처리
             manager.AddScore((int)m_hp * 10);
+            hp.PatternEnd();
+            cc.OffUI(1);
         }
     } 
 

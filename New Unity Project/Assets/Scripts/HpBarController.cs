@@ -6,7 +6,7 @@ public class HpBarController : MonoBehaviour
     Transform t = null;
     float x, y, z;
 
-    private void Start()
+    private void Awake()
     {
         x = t.localScale.x;
         y = t.localScale.y;
@@ -15,5 +15,8 @@ public class HpBarController : MonoBehaviour
     public void Scaling(float nowhp)
     {
         t.localScale = new Vector3(nowhp*x, y, z);
+    }
+    public void PatternEnd() {
+        t.localScale = new Vector3(x, y, z);
     }
 }

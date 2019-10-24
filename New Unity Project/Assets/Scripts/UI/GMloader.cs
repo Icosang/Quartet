@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class GMloader : MonoBehaviour
 {
+    CanvasController cc;
     private void Awake()
     {
         if (D.TryGet<GameManager>() == null)
@@ -12,9 +13,11 @@ public class GMloader : MonoBehaviour
     }
     private void Start()
     {
+        cc = D.Get<CanvasController>();
         if (gameObject.tag == "PlayScreen")
         {
-            D.Get<CanvasController>().ActiveUI(0);
+            cc.OnUI(0);
+            cc.OnUI(1);
         }
     }
 }
