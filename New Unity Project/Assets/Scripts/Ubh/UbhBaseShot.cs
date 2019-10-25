@@ -61,6 +61,8 @@ public abstract class UbhBaseShot : UbhMonoBehaviour
     protected bool m_shooting;
 
     private UbhShotCtrl m_shotCtrl;
+    [SerializeField]
+    SoundPlayer player = null;
 
     public UbhShotCtrl shotCtrl
     {
@@ -163,5 +165,9 @@ public abstract class UbhBaseShot : UbhMonoBehaviour
                     m_useAutoRelease, m_autoReleaseTime,
                     m_shotCtrl.m_axisMove, m_shotCtrl.m_inheritAngle,
                     m_useMaxSpeed, m_maxSpeed, m_useMinSpeed, m_minSpeed);
+        if (player != null) {
+            // 개개의 탄을 쏠때마다 재생
+            player.PlaySound();
+        }
     }
 }

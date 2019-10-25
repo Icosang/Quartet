@@ -64,6 +64,7 @@ MonoBehaviour:
   m_shotFinishedCallbackEvents:
     m_PersistentCalls:
       m_Calls: []
+  player: {fileID: 0}
   m_wayNum: 15
   m_centerAngle: 210
   m_betweenAngle: 15
@@ -117,8 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdddc1614fe23cc4392bf3c29f9d6cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 0
   m_hp: 1000
-  m_point: 100
   collider: {fileID: 5388409036385886008}
 --- !u!212 &943055679474236790
 SpriteRenderer:
@@ -362,6 +363,7 @@ MonoBehaviour:
   m_shotFinishedCallbackEvents:
     m_PersistentCalls:
       m_Calls: []
+  player: {fileID: 0}
   m_angle: 0
 --- !u!1 &2195588447091180842
 GameObject:
@@ -373,6 +375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5697825242758608077}
   - component: {fileID: 7936836413198806353}
+  - component: {fileID: 7550575303890547699}
   m_Layer: 0
   m_Name: Spiral
   m_TagString: Untagged
@@ -424,6 +427,19 @@ MonoBehaviour:
   m_shotRoutineFinishedCallbackEvents:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7550575303890547699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2195588447091180842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7839098e95a044db44a21b6d4115d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: Bullet2
 --- !u!1 &2325097279747683783
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,6 +450,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7375292225300292797}
   - component: {fileID: 716590595025413651}
+  - component: {fileID: 4485106032938979584}
   m_Layer: 0
   m_Name: Circle1
   m_TagString: Untagged
@@ -482,6 +499,19 @@ MonoBehaviour:
   m_shotRoutineFinishedCallbackEvents:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4485106032938979584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2325097279747683783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7839098e95a044db44a21b6d4115d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: Bullet
 --- !u!1 &2375643425407722892
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,6 +657,7 @@ MonoBehaviour:
   m_shotFinishedCallbackEvents:
     m_PersistentCalls:
       m_Calls: []
+  player: {fileID: 4485106032938979584}
   m_angle: 6
 --- !u!1 &2542198771008116387
 GameObject:
@@ -1027,6 +1058,7 @@ MonoBehaviour:
   m_shotFinishedCallbackEvents:
     m_PersistentCalls:
       m_Calls: []
+  player: {fileID: 4485106032938979584}
   m_angle: 0
 --- !u!1 &4542680804194929699
 GameObject:
@@ -1114,6 +1146,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  player: {fileID: 7550575303890547699}
   m_startAngle: 90
   m_shiftAngle: 7.5
   m_betweenDelay: 0.05
@@ -1181,6 +1214,7 @@ MonoBehaviour:
   m_shotFinishedCallbackEvents:
     m_PersistentCalls:
       m_Calls: []
+  player: {fileID: 0}
   m_startAngle: 0
   m_shiftAngle: -15
   m_betweenDelay: 0
@@ -1422,6 +1456,7 @@ MonoBehaviour:
   m_shotFinishedCallbackEvents:
     m_PersistentCalls:
       m_Calls: []
+  player: {fileID: 0}
   m_angle: 3
 --- !u!1 &5614508692537133979
 GameObject:
@@ -1743,6 +1778,7 @@ MonoBehaviour:
   m_shotFinishedCallbackEvents:
     m_PersistentCalls:
       m_Calls: []
+  player: {fileID: 0}
   m_angle: 0
 --- !u!1 &6298133120944825500
 GameObject:
@@ -1991,6 +2027,7 @@ MonoBehaviour:
   m_shotFinishedCallbackEvents:
     m_PersistentCalls:
       m_Calls: []
+  player: {fileID: 0}
   m_holeCenterAngle: 180
   m_holeSize: 20
   m_setTargetFromTag: 1
@@ -2144,6 +2181,7 @@ MonoBehaviour:
   m_shotFinishedCallbackEvents:
     m_PersistentCalls:
       m_Calls: []
+  player: {fileID: 0}
   m_startAngle: 180
   m_shiftAngle: 15
   m_betweenDelay: 0
@@ -2211,6 +2249,7 @@ MonoBehaviour:
   m_shotFinishedCallbackEvents:
     m_PersistentCalls:
       m_Calls: []
+  player: {fileID: 0}
   m_angle: 9
 --- !u!1 &8279739559443156713
 GameObject:
@@ -2333,6 +2372,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  player: {fileID: 7550575303890547699}
   m_startAngle: 270
   m_shiftAngle: -7.5
   m_betweenDelay: 0.05

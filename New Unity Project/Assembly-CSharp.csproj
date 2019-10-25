@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\Shockwave\ShockWave.cs" />
     <Compile Include="Assets\Scripts\Shockwave\ShockWave_WorldSpace.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\SoundPlayer.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\Attribute\UbhConditionalHideAttribute.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\Bullet\UbhTentacleBullet.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\Controller\UbhShotCtrl.cs" />
