@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UB.Simple2dWeatherEffects.Standard;
 
 public class GMloader : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class GMloader : MonoBehaviour
         {
             cc.OnUI(0);
             cc.OnUI(1);
+            Camera.main.GetComponent<D2FogsNoiseTexPE>().VerticalSpeed = 0.2f;
         }
     }
 }

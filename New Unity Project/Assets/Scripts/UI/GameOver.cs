@@ -11,6 +11,9 @@ public class GameOver : MonoBehaviour
             D.Get<GameManager>().scrollSpeed = 0.5f;
             D.Get<UbhTimer>().Resume();
             D.Get<GameManager>().life = 4;
+            CanvasController cc = D.Get<CanvasController>();
+                cc.OffUI(0);
+                cc.OffUI(1);
         } 
     }
 }

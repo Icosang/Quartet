@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UB.Simple2dWeatherEffects.Standard;
 
 public class PlayerHitbox : MonoBehaviour
 {
@@ -36,6 +37,8 @@ public class PlayerHitbox : MonoBehaviour
                     manager.score = 0; // 스코어 저장 후 초기화
                     manager.scrollSpeed = 0f; // 배경스크롤정지
                     timer.Pause(); // 탄막 정지
+                    soundManager.sounds["Bunnyhop"].Stop();
+                    Camera.main.GetComponent<D2FogsNoiseTexPE>().VerticalSpeed = 0f; //안개멈춤
                     SceneManager.LoadScene("GameOver", LoadSceneMode.Additive); // 게임오버씬 호출
                     return;
                 }
