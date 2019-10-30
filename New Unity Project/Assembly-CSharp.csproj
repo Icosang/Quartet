@@ -155,6 +155,9 @@
     <Compile Include="Assets\ShockWave\Demos\Scripts\Rotate.cs" />
     <Compile Include="Assets\ShockWave\Demos\Scripts\ShootOnClick.cs" />
     <Compile Include="Assets\ShockWave\Demos\Scripts\SwitchScenes.cs" />
+    <Compile Include="Assets\UB\Simple2dWeatherEffects\Standard\D2FogsNoiseTexPE.cs" />
+    <Compile Include="Assets\UB\Simple2dWeatherEffects\Standard\D2FogsPE.cs" />
+    <Compile Include="Assets\UB\Simple2dWeatherEffects\Standard\EffectBase.cs" />
     <Compile Include="Assets\UniBulletHell\Example\Script\UbhAutoDespawnParticle.cs" />
     <Compile Include="Assets\UniBulletHell\Example\Script\UbhAutoScaleGUIText.cs" />
     <Compile Include="Assets\UniBulletHell\Example\Script\UbhBackground.cs" />
@@ -169,10 +172,12 @@
     <Compile Include="Assets\UniBulletHell\Example\Script\UbhSpaceship.cs" />
     <Compile Include="Assets\UniBulletHell\Example\Script\UbhTitle.cs" />
     <None Include="Assets\ShockWave\Demos\Resources\ShockWave.shader" />
+    <None Include="Assets\UB\Simple2dWeatherEffects\Standard\D2FogsNoiseTex.shader" />
     <None Include="Assets\UniBulletHell\Example\PaintShotData\paint_shot_data_0001.txt" />
     <None Include="Assets\UniBulletHell\license.txt" />
     <None Include="Assets\UniBulletHell\readme.txt" />
     <None Include="Assets\Scripts\Shockwave\ShockWave.shader" />
+    <None Include="Assets\UB\Simple2dWeatherEffects\Standard\D2Fogs.shader" />
     <None Include="Assets\UniBulletHell\Example\PaintShotData\paint_shot_data_0002.txt" />
     <None Include="Assets\ShockWave\Resources\ShockWave(WorldSpace).shader" />
     <Reference Include="Unity.Timeline.Editor">
