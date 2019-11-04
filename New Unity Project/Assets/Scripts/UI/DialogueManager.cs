@@ -34,7 +34,7 @@ public class DialogueManager : MonoBehaviour
     private int count; // 대화 진행 상황 카운트.
 
     public Animator animSprite;
-    public Animator animDialogueWindow;
+    //public Animator animDialogueWindow;
 
     public bool talking = false;
     private bool keyActivated = false;
@@ -61,7 +61,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         animSprite.SetBool("Appear", true);
-        animDialogueWindow.SetBool("Appear", true);
+        //animDialogueWindow.SetBool("Appear", true);
         StartCoroutine(StartDialogueCoroutine());
     }
     public void ExitDialogue()
@@ -72,7 +72,7 @@ public class DialogueManager : MonoBehaviour
         listSprites.Clear();
         listDialogueWindows.Clear();
         animSprite.SetBool("Appear", false);
-        animDialogueWindow.SetBool("Appear", false);
+        //animDialogueWindow.SetBool("Appear", false);
         talking = false;
     }
 
@@ -84,11 +84,11 @@ public class DialogueManager : MonoBehaviour
             if (listDialogueWindows[count] != listDialogueWindows[count - 1])
             {
                 animSprite.SetBool("Change", true);
-                animDialogueWindow.SetBool("Appear", false);
+                //animDialogueWindow.SetBool("Appear", false);
                 yield return new WaitForSeconds(0.2f);
                 rendererDialogueWindow.GetComponent<SpriteRenderer>().sprite = listDialogueWindows[count];
                 rendererSprite.GetComponent<SpriteRenderer>().sprite = listSprites[count];
-                animDialogueWindow.SetBool("Appear", true);
+                //animDialogueWindow.SetBool("Appear", true);
                 animSprite.SetBool("Change", false);
             }
             else
@@ -110,7 +110,7 @@ public class DialogueManager : MonoBehaviour
         else
         {
             yield return new WaitForSeconds(0.05f);
-            rendererDialogueWindow.GetComponent<SpriteRenderer>().sprite = listDialogueWindows[count];
+            //rendererDialogueWindow.GetComponent<SpriteRenderer>().sprite = listDialogueWindows[count];
             rendererSprite.GetComponent<SpriteRenderer>().sprite = listSprites[count];
         }
         keyActivated = true;

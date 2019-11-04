@@ -266,7 +266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &118237584
 RectTransform:
   m_ObjectHideFlags: 0
@@ -283,7 +283,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.98, y: -2.82}
+  m_AnchoredPosition: {x: 4, y: -3}
   m_SizeDelta: {x: 21.03, y: 45.146164}
   m_Pivot: {x: 0.68, y: 0.5}
 --- !u!212 &118237585
@@ -784,7 +784,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11, y: 136}
+  m_AnchoredPosition: {x: -37, y: 152}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &439478572
@@ -805,7 +805,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9e26f91636ce338499f21066b2747e12, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2606,7 +2606,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1379260969
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2641,10 +2641,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1179401231}
-  rendererSprite: {fileID: 0}
+  rendererSprite: {fileID: 118237585}
   rendererDialogueWindow: {fileID: 0}
   animSprite: {fileID: 118237587}
-  animDialogueWindow: {fileID: 0}
   talking: 0
 --- !u!1 &1427751644
 GameObject:
@@ -2682,12 +2681,12 @@ MonoBehaviour:
   - 265
   sprites:
   - {fileID: 21300000, guid: b9d39f247fb5bbd43bb98da3cd905856, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: b9d39f247fb5bbd43bb98da3cd905856, type: 3}
+  - {fileID: 21300000, guid: b9d39f247fb5bbd43bb98da3cd905856, type: 3}
   dialogueWindows:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 9e26f91636ce338499f21066b2747e12, type: 3}
+  - {fileID: 21300000, guid: 9e26f91636ce338499f21066b2747e12, type: 3}
+  - {fileID: 21300000, guid: 9e26f91636ce338499f21066b2747e12, type: 3}
 --- !u!114 &1427751646
 MonoBehaviour:
   m_ObjectHideFlags: 0
