@@ -134,6 +134,8 @@
     <Compile Include="Assets\Scripts\UI\BackgroundScroller.cs" />
     <Compile Include="Assets\Scripts\UI\Bwall.cs" />
     <Compile Include="Assets\Scripts\UI\CanvasController.cs" />
+    <Compile Include="Assets\Scripts\UI\Dialogue.cs" />
+    <Compile Include="Assets\Scripts\UI\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\UI\FadeIn.cs" />
     <Compile Include="Assets\Scripts\UI\GameOver.cs" />
     <Compile Include="Assets\Scripts\UI\GMloader.cs" />
@@ -142,6 +144,7 @@
     <Compile Include="Assets\Scripts\UI\MenuSelector.cs" />
     <Compile Include="Assets\Scripts\UI\Rwall.cs" />
     <Compile Include="Assets\Scripts\UI\Score.cs" />
+    <Compile Include="Assets\Scripts\UI\TestDialogue.cs" />
     <Compile Include="Assets\Scripts\UI\Timebonus.cs" />
     <Compile Include="Assets\Scripts\UI\Twall.cs" />
     <Compile Include="Assets\ShockWave\Demos\Scripts\AlwaysFace.cs" />
