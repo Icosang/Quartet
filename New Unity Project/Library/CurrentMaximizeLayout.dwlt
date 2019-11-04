@@ -26,7 +26,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 444}
   m_MaxSize: {x: 22012, y: 10022}
   vertical: 0
-  controlID: 2398
+  controlID: 151
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 444}
   m_MaxSize: {x: 4002, y: 8044}
   vertical: 1
-  controlID: 2378
+  controlID: 55
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,16 +189,16 @@ MonoBehaviour:
   m_ShowContextualTools: 0
   m_WindowGUID: 7f518de022303074a98eab8345e15c5b
   m_Gizmos: 1
-  m_SceneIsLit: 0
+  m_SceneIsLit: 1
   m_SceneLighting: 1
   m_2DMode: 1
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: -4, z: 0}
+    m_Target: {x: 2.8681898, y: -2.8200002, z: 0}
     speed: 2
-    m_Value: {x: 0, y: -4, z: 0}
+    m_Value: {x: 2.8681898, y: -2.8200002, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_SceneViewState:
     showFog: 1
     showMaterialUpdate: 0
-    showSkybox: 0
+    showSkybox: 1
     showFlares: 1
     showImageEffects: 1
     showParticleSystems: 1
@@ -231,9 +231,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 3.0049937
+    m_Target: 24.13686
     speed: 2
-    m_Value: 3.0049937
+    m_Value: 24.13686
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -457,7 +457,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 6ef7ffffda3c0000
+      m_ExpandedIDs: 6afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -546,20 +546,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Sprites
+    - Assets/Resources/Sprites/Piano
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Sprites
+  - Assets/Resources/Sprites/Piano
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "D:\\\uAC9C\uAE30\uD68D\\goodmusicSTG\\New Unity Project"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 12330000
-    m_LastClickedID: 13074
-    m_ExpandedIDs: 000000005e2f0000b82f00003230000060300000c830000096320000bc32000012330000be330000363400001435000028350000523500005835000096350000fa350000143600009a39000000ca9a3b
+    m_SelectedIDs: d6330000
+    m_LastClickedID: 13270
+    m_ExpandedIDs: 000000005e2f0000b82f00003230000060300000c83000007c3200009632000012330000be33000036340000283500004235000048350000ea35000004360000163a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -587,7 +587,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005e2f0000b82f00003230000060300000c830000096320000bc320000be330000363400001435000028350000523500005835000096350000fa350000143600009a39000000ca9a3b
+    m_ExpandedIDs: 000000005e2f0000b82f00003230000060300000c830000096320000bc320000be330000363400001435000028350000423500004835000086350000ea35000004360000163a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -612,8 +612,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 36350000
-    m_LastClickedInstanceID: 13622
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: ec30000000000000fa30000034350000
     m_RenameOverlay:
@@ -639,7 +639,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 740}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 112
@@ -662,8 +662,8 @@ MonoBehaviour:
     y: 0
     width: 413
     height: 731
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 72}
+  m_MaxSize: {x: 4002, y: 4022}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -705,5 +705,5 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
-  m_LastInspectedObjectInstanceID: 13622
+  m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
