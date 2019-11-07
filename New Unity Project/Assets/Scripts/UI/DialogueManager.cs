@@ -38,6 +38,8 @@ public class DialogueManager : MonoBehaviour
 
     public bool talking = false;
     private bool keyActivated = false;
+    bool ontalk = false;
+    float talkdelay = 0.05f;
 
     // Use this for initialization
     void Start()
@@ -114,11 +116,14 @@ public class DialogueManager : MonoBehaviour
             rendererSprite.GetComponent<SpriteRenderer>().sprite = listSprites[count];
         }
         keyActivated = true;
+        ontalk = true;
+
         for (int i = 0; i < listSentences[count].Length; i++)
         {
             text.text += listSentences[count][i]; // 1글자씩 출력.
-            yield return new WaitForSeconds(0.01f);
+            if (ontalk) yield return new WaitForSeconds(talkdelay);
         }
+        ontalk = false;
 
     }
     // Update is called once per frame
@@ -128,6 +133,11 @@ public class DialogueManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Z))
             {
+                if (ontalk) {
+                    // 말하는도중이면 대사를 끝까지 출력
+                    ontalk = false;
+                    return;
+                }
                 keyActivated = false;
                 count++;
                 text.text = "";

@@ -266,7 +266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &118237584
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1078,7 +1078,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!20 &840151825
 Camera:
   m_ObjectHideFlags: 0
@@ -2606,7 +2606,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1379260969
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2676,8 +2676,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - "\uB2E4\uB78C\uC950 \uD5CC \uCCC7\uBC14\uD034\uC5D0 \uD0C0\uACE0\uD30C"
-  - 3.141592
+  - "\uAE40 \uC218\uD55C\uBB34 \uAC70\uBD81\uC774\uC640\uB450\uB8E8\uBBF8 \uC0BC\uCC9C\uAC11\uC790\uB3D9\uBC29\uC0AD
+    \uCE58\uCE58\uCE74\uD3EC"
+  - 3.1415926535897932384626433832
   - Was It a cat i saw?
   sprites:
   - {fileID: 21300000, guid: b9d39f247fb5bbd43bb98da3cd905856, type: 3}
