@@ -8,6 +8,7 @@ public class BackgroundScroller : MonoBehaviour
     [SerializeField]
     float mag = 1.0f;
     GameManager manager;
+    float offset = 0f;
     void Awake()
     {
         rend = GetComponent<Renderer>();
@@ -21,7 +22,7 @@ public class BackgroundScroller : MonoBehaviour
     {
         if (!manager.ispausing)
         {
-            float offset = Time.time * (D.Get<GameManager>().scrollSpeed) * mag;
+            offset += Time.deltaTime * (D.Get<GameManager>().scrollSpeed) * mag;
             rend.material.SetTextureOffset("_MainTex", new Vector2(0, offset));
         }
     }

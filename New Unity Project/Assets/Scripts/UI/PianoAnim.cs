@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class PianoAnim : MonoBehaviour
 {
-    public Animation anim;
+    [SerializeField]
+    Animator anim;
     bool pausing = false;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && !pausing)
         {
-            anim["Piano"].speed = 0f;
+            anim.SetBool("pausing", true);
             pausing = true;
 
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && pausing)
         {
-            anim["Piano"].speed = 1f;
+            anim.SetBool("pausing", false);
             pausing = false;
         }
     }
