@@ -296,6 +296,7 @@ GameObject:
   - component: {fileID: 4485237868183381719}
   - component: {fileID: 2736723256245501528}
   - component: {fileID: 6505210076326947322}
+  - component: {fileID: 1324931945048640487}
   m_Layer: 0
   m_Name: PianoSprite
   m_TagString: Untagged
@@ -385,6 +386,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1324931945048640487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713586564521393195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0987694b2453bda44990dfdef6a8efbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!1 &5396550774399556284
 GameObject:
   m_ObjectHideFlags: 0
