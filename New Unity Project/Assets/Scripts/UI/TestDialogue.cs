@@ -11,7 +11,7 @@ public class TestDialogue : MonoBehaviour
     {
         DM = FindObjectOfType<DialogueManager>();
     }
-    private void Update()
+    private void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.X) && !started) {
             DM.ShowDialogue(dialogue);

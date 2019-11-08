@@ -8,11 +8,15 @@ public class MenuSelector : MonoBehaviour
     int index = 0;
     float delayTimer = 0;
     float delayTime = 0.2f;
+    [SerializeField]
     Animator animator;
+    SoundManager soundmanager;
+    GameManager manager;
     void Start()
     {
-        animator = GetComponent<Animator>();
-        D.Get<SoundManager>().sounds["1635"].Play();
+        soundmanager = D.Get<SoundManager>();
+        manager = D.Get<GameManager>();
+        soundmanager.sounds["1635"].Play();
     }
 
     void Update()
@@ -35,13 +39,13 @@ public class MenuSelector : MonoBehaviour
         animator.SetInteger("Index", index);
 
         if (delayTimer > 0) delayTimer -= Time.deltaTime;
-        //Z누를시 작동
+        //Z나 엔터 누를시 작동
         if (Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.Return))
         {
             switch (index) {
                 case 0:
                     SceneManager.LoadScene("DrumScene");
-                    D.Get<SoundManager>().sounds["1635"].Stop();
+                    soundmanager.sounds["1635"].Stop();
                     break;
                 case 1:
                     break;

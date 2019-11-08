@@ -143,6 +143,7 @@
     <Compile Include="Assets\Scripts\UI\Life.cs" />
     <Compile Include="Assets\Scripts\UI\Lwall.cs" />
     <Compile Include="Assets\Scripts\UI\MenuSelector.cs" />
+    <Compile Include="Assets\Scripts\UI\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\UI\Rwall.cs" />
     <Compile Include="Assets\Scripts\UI\Score.cs" />
     <Compile Include="Assets\Scripts\UI\TestDialogue.cs" />

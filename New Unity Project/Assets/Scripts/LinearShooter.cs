@@ -6,10 +6,16 @@ public class LinearShooter : MonoBehaviour
     float MaxDistance = 20f;
     float delayTimer = 0;
     float delayTime = 0.15f;
+    GameManager manager;
+
+    private void Start()
+    {
+        manager = D.Get<GameManager>();
+    }
     void FixedUpdate()
     {
         // 5 - Shooting
-        if (Input.GetKey(KeyCode.Z))
+        if (Input.GetKey(KeyCode.Z) && !manager.ispausing)
         {
             if (delayTimer <= 0)
             {

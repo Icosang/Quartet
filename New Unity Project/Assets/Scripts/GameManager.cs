@@ -6,8 +6,9 @@ public class GameManager : MonoBehaviour
     public float scrollSpeed { get; set; } = 0.5f;
     public long score { get; set; } = 0;
     public int life { get; set; } = 4;
-
+    public bool isplayscreen { get; set; } = false;
     public bool timebonus { get; set; } = true;
+    public bool ispausing { get; set; } = false;
     void Awake() {
         //SceneManager.LoadScene("MainMenu", LoadSceneMode.Additive);
     }

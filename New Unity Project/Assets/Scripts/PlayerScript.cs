@@ -8,7 +8,7 @@ public class PlayerScript : MonoBehaviour
     /// <summary>
     /// 1 - The speed of the ship
     /// </summary>
-    public float speed = 18f;
+    public float speed = 12f;
     public bool LMoveSwitch { get; set; } = true;
     public bool RMoveSwitch { get; set; } = true;
     public bool TMoveSwitch { get; set; } = true;
@@ -17,15 +17,18 @@ public class PlayerScript : MonoBehaviour
     public float inputX { get; set; } = 0f;
     public float inputY { get; set; } = 0f;
     Vector2 destination;
+    [SerializeField]
     UbhShotCtrl ctrl;
+    GameManager manager;
 
-    void Awake()
+    private void Start()
     {
-        ctrl = GetComponent<UbhShotCtrl>();
+        manager = D.Get<GameManager>();
     }
     void Update()
     {
-
+        // 일시정지
+        if (manager.ispausing) return;
         //방향설정
 
         if (Input.GetKeyDown(KeyCode.LeftArrow) && LMoveSwitch) inputX = -1f;
@@ -64,7 +67,7 @@ public class PlayerScript : MonoBehaviour
     }
     void FixedUpdate() {
         // 5 - Shooting  
-        if (Input.GetKey(KeyCode.Z))
+        if (Input.GetKey(KeyCode.Z) && !manager.ispausing)
         {
             if(!ctrl.shooting) 
                 ctrl.StartShotRoutine();
