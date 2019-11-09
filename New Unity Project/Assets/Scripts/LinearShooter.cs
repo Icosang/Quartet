@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class LinearShooter : MonoBehaviour
 {
@@ -7,10 +8,14 @@ public class LinearShooter : MonoBehaviour
     float delayTimer = 0;
     float delayTime = 0.15f;
     GameManager manager;
+    [SerializeField]
+    ParticleSystem particle = null;
+    Vector2 location;
 
     private void Start()
     {
         manager = D.Get<GameManager>();
+        location = new Vector2(transform.position.x, 0);
     }
     void FixedUpdate()
     {
@@ -28,6 +33,9 @@ public class LinearShooter : MonoBehaviour
                     if (enemy != null)
                     {
                         enemy.HpDown(1.5f);
+                        location = new Vector2(transform.position.x, enemy.transform.position.y);
+                        particle.transform.position = location;
+                        StartCoroutine(Bang());
                     }
                 }
 
@@ -36,5 +44,11 @@ public class LinearShooter : MonoBehaviour
 
         }
         if (delayTimer > 0) delayTimer -= Time.deltaTime;
+    }
+    IEnumerator Bang()
+    {
+        yield return new WaitForSeconds(0.1f);
+        particle.Play();
+        yield return null;
     }
 }

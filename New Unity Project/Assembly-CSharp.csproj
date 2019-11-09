@@ -63,6 +63,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\PinwheelFantasyEffect\Script\DemoManager.cs" />
+    <Compile Include="Assets\PinwheelFantasyEffect\Script\FairyDustRandomPosition.cs" />
+    <Compile Include="Assets\PinwheelFantasyEffect\Script\FairyMeteorAddForceDemo.cs" />
+    <Compile Include="Assets\PinwheelFantasyEffect\Script\Fireball.cs" />
+    <Compile Include="Assets\PinwheelFantasyEffect\Script\Spin.cs" />
+    <Compile Include="Assets\PinwheelFantasyEffect\Script\Test.cs" />
     <Compile Include="Assets\Scripts\BulletSetter.cs" />
     <Compile Include="Assets\Scripts\D.cs" />
     <Compile Include="Assets\Scripts\D2FogsNoiseTexPE.cs" />
@@ -179,6 +185,7 @@
     <Compile Include="Assets\UniBulletHell\Example\Script\UbhTitle.cs" />
     <None Include="Assets\ShockWave\Demos\Resources\ShockWave.shader" />
     <None Include="Assets\Resources\D2FogsNoiseTex.shader" />
+    <None Include="Assets\PinwheelFantasyEffect\README.txt" />
     <None Include="Assets\UniBulletHell\Example\PaintShotData\paint_shot_data_0001.txt" />
     <None Include="Assets\UniBulletHell\license.txt" />
     <None Include="Assets\UniBulletHell\readme.txt" />

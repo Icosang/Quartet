@@ -63,6 +63,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\PinwheelFantasyEffect\Script\Editor\CompileLogger.cs" />
+    <Compile Include="Assets\PinwheelFantasyEffect\Script\Editor\PolarisV2AdsWindow.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\Editor\UbhBaseShotInspector.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\Editor\UbhObjectPoolInspector.cs" />
     <Compile Include="Assets\Scripts\Ubh\Script\Editor\UbhPaintShotInspector.cs" />
