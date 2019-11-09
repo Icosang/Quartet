@@ -11,11 +11,12 @@ public class LinearShooter : MonoBehaviour
     [SerializeField]
     ParticleSystem particle = null;
     Vector2 location;
+    int particlecount = 0;
 
     private void Start()
     {
         manager = D.Get<GameManager>();
-        location = new Vector2(transform.position.x, 0);
+        location = new Vector2(transform.position.x + 1.5f , 0);
     }
     void FixedUpdate()
     {
@@ -34,8 +35,16 @@ public class LinearShooter : MonoBehaviour
                     {
                         enemy.HpDown(1.5f);
                         location = new Vector2(transform.position.x, enemy.transform.position.y);
-                        particle.transform.position = location;
-                        StartCoroutine(Bang());
+                        if (particle != null)
+                        {
+                            particle.transform.position = location;
+                            particlecount++;
+                            if (particlecount == 1)
+                            {
+                                StartCoroutine(Bang());
+                                particlecount = 0;
+                            }
+                        }
                     }
                 }
 
