@@ -24,5 +24,11 @@ public class GMloader : MonoBehaviour
             cc.OnUI(1);
             Camera.main.GetComponent<D2FogsNoiseTexPE>().VerticalSpeed = 0.2f;
         }
+        if (gameObject.tag == "MainScreen") {
+            cc.OffUI(0);
+            cc.OffUI(1);
+            cc.OffUI(2);
+            cc.OffUI(3);
+        }
     }
 }

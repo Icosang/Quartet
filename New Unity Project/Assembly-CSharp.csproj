@@ -74,7 +74,6 @@
     <Compile Include="Assets\Scripts\D2FogsNoiseTexPE.cs" />
     <Compile Include="Assets\Scripts\DBinder.cs" />
     <Compile Include="Assets\Scripts\DDOL.cs" />
-    <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrimPattern3.cs" />
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\Drum.cs" />
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumBullet1Sprite.cs" />
     <Compile Include="Assets\Scripts\EnemyPattern\Drum\DrumBullet5.cs" />
@@ -150,9 +149,9 @@
     <Compile Include="Assets\Scripts\UI\Lwall.cs" />
     <Compile Include="Assets\Scripts\UI\MenuSelector.cs" />
     <Compile Include="Assets\Scripts\UI\PauseMenu.cs" />
-    <Compile Include="Assets\Scripts\UI\PianoAnim.cs" />
     <Compile Include="Assets\Scripts\UI\Rwall.cs" />
     <Compile Include="Assets\Scripts\UI\Score.cs" />
+    <Compile Include="Assets\Scripts\UI\SpriteAnim.cs" />
     <Compile Include="Assets\Scripts\UI\TestDialogue.cs" />
     <Compile Include="Assets\Scripts\UI\Timebonus.cs" />
     <Compile Include="Assets\Scripts\UI\Twall.cs" />

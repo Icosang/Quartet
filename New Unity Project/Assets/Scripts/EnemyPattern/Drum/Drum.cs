@@ -12,6 +12,8 @@ public class Drum : UbhEnemy
     PatternState pattern = PatternState.Pattern1;
     [SerializeField]
     Collider2D collider = null;
+    [SerializeField]
+    Renderer renderer = null;
     HpBarController hp;
     CanvasController cc;
 
@@ -32,7 +34,7 @@ public class Drum : UbhEnemy
         if (m_hp <= 600 && (pattern.Equals(PatternState.Pattern1)))
         {
             StartCoroutine(EndPattern(0f, 0, 300000, 50));
-            D.Get<SoundManager>().sounds["SPELLCARD"].Play();
+            D.Get<SoundManager>().sounds["SPELL"].Play();
             pool.ReleaseAllBullet();
             StartCoroutine(InvincibleTime(5.0f));
             StartCoroutine(StartPattern(3.0f, 1));
@@ -41,7 +43,7 @@ public class Drum : UbhEnemy
         if (m_hp <= 100 && (pattern.Equals(PatternState.Pattern2)))
         {
             StartCoroutine(EndPattern(0f, 1, 300000, 50));
-            D.Get<SoundManager>().sounds["SPELLCARD"].Play();
+            D.Get<SoundManager>().sounds["SPELL"].Play();
             pool.ReleaseAllBullet();
             //보스 반투명화, 버티기 돌입
             Invincible = true;
@@ -60,7 +62,7 @@ public class Drum : UbhEnemy
     IEnumerator Fade()
     {
         collider.enabled = false;
-        for (float f = 1.0f ; f >= 0.4f ; f -= 0.1f)
+        for (float f = 1.0f ; f >= 0.2f ; f -= 0.1f)
         {
             var c = renderer.material.color;
             c.a = f;

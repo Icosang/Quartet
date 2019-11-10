@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PianoPause
+  m_Name: PianoSprite
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -21,6 +21,16 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: 803f7bf10901f884191529b49ca0a143, type: 3}
+    - time: 0.083333336
+      value: {fileID: 21300000, guid: ad808bc431eed5846a0fa8c68ea699bb, type: 3}
+    - time: 0.16666667
+      value: {fileID: 21300000, guid: 1ffe14b2ecd658d4c83c6e0492572e49, type: 3}
+    - time: 0.25
+      value: {fileID: 21300000, guid: a578a7c4789a31b409a57968bcaf2017, type: 3}
+    - time: 0.33333334
+      value: {fileID: 21300000, guid: 1c4bd11f562cd3c4e9a002b568ff107d, type: 3}
+    - time: 0.41666666
+      value: {fileID: 21300000, guid: 119cf6297aa3a07439f930d8317a1180, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -41,12 +51,17 @@ AnimationClip:
       isPPtrCurve: 1
     pptrCurveMapping:
     - {fileID: 21300000, guid: 803f7bf10901f884191529b49ca0a143, type: 3}
+    - {fileID: 21300000, guid: ad808bc431eed5846a0fa8c68ea699bb, type: 3}
+    - {fileID: 21300000, guid: 1ffe14b2ecd658d4c83c6e0492572e49, type: 3}
+    - {fileID: 21300000, guid: a578a7c4789a31b409a57968bcaf2017, type: 3}
+    - {fileID: 21300000, guid: 1c4bd11f562cd3c4e9a002b568ff107d, type: 3}
+    - {fileID: 21300000, guid: 119cf6297aa3a07439f930d8317a1180, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.083333336
+    m_StopTime: 0.5
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

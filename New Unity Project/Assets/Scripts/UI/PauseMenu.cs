@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UB.Simple2dWeatherEffects.Standard;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -18,11 +19,13 @@ public class PauseMenu : MonoBehaviour
     Animator animator = null;
     GameManager manager;
     UbhTimer timer;
+    SoundManager soundManager;
 
     private void Start()
     {
         manager = D.Get<GameManager>();
         timer = D.Get<UbhTimer>();
+        soundManager = D.Get<SoundManager>();
     }
     void Update()
     {
@@ -48,21 +51,51 @@ public class PauseMenu : MonoBehaviour
 
         if (index == menulength) index = 0;
 
-        //animator.SetInteger("Index", index);
+        animator.SetInteger("Index", index);
 
         if (delayTimer > 0) delayTimer -= Time.deltaTime;
         //Z나 엔터 누를시 작동
-        if (Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Return))
         {
             switch (index)
             {
                 case 0:
+                    manager.ispausing = false;
+                    cc.OffUI(3);
+                    timer.Resume();
+                    soundManager.sounds["Bunnyhop"].Play();
                     break;
                 case 1:
+                    index = 0; // 자체 인덱스 초기화
+                    manager.score = 0; // 스코어 저장 후 초기화
+                    manager.isplayscreen = false; // 플레이 중이 아님
+                    soundManager.sounds["Bunnyhop"].Stop();
+                    // 여러가지 초기화
+                    D.Get<UbhObjectPool>().ReleaseAllBullet();
+                    timer.Resume();
+                    manager.life = 4;
+                    manager.ispausing = false;
+                    SceneManager.LoadScene("DrumScene");
+                    cc.OffUI(3);
                     break;
                 case 2:
+                    index = 0; // 자체 인덱스 초기화
+                    manager.score = 0; // 스코어 저장 후 초기화
+                    manager.isplayscreen = false; // 플레이 중이 아님
+                    soundManager.sounds["Bunnyhop"].Stop();
+                    // 여러가지 초기화
+                    D.Get<UbhObjectPool>().ReleaseAllBullet();
+                    timer.Resume();
+                    manager.life = 4;
+                    manager.ispausing = false;
+                    SceneManager.LoadScene("MainMenu");
                     break;
             }
+        }
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            manager.ispausing = false;
+            cc.OffUI(3);
+            soundManager.sounds["Bunnyhop"].Play();
         }
 
     }

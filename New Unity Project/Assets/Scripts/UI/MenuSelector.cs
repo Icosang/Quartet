@@ -40,7 +40,7 @@ public class MenuSelector : MonoBehaviour
 
         if (delayTimer > 0) delayTimer -= Time.deltaTime;
         //Z나 엔터 누를시 작동
-        if (Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Return))
         {
             switch (index) {
                 case 0:
