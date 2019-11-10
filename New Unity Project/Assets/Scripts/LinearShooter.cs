@@ -12,10 +12,13 @@ public class LinearShooter : MonoBehaviour
     ParticleSystem particle = null;
     Vector2 location;
     int particlecount = 0;
+    [SerializeField]
+    float damage = 1.5f;
 
     private void Start()
     {
         manager = D.Get<GameManager>();
+        // 파티클을 왼쪽 리니어슈터에만 달아놨다
         location = new Vector2(transform.position.x + 1.5f , 0);
     }
     void FixedUpdate()
@@ -25,6 +28,7 @@ public class LinearShooter : MonoBehaviour
         {
             if (delayTimer <= 0)
             {
+                D.Get<SoundManager>().sounds["Bullet"].Play();
                 Debug.DrawRay(transform.position, transform.up * MaxDistance, Color.red);
                 RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, transform.up, MaxDistance);
                 for (int i = 0; i < hits.Length; i++)
@@ -33,7 +37,7 @@ public class LinearShooter : MonoBehaviour
                     var enemy = hit.transform.GetComponent<UbhEnemy>();
                     if (enemy != null)
                     {
-                        enemy.HpDown(1.5f);
+                        enemy.HpDown(damage);
                         location = new Vector2(transform.position.x, enemy.transform.position.y);
                         if (particle != null)
                         {

@@ -5,6 +5,7 @@ using UB.Simple2dWeatherEffects.Standard;
 
 public class PlayerHitbox : MonoBehaviour
 {
+    [SerializeField]
     bool isInvincible = false;
     // 무적시간, /10 초
     int invincibletime = 50;
@@ -42,7 +43,7 @@ public class PlayerHitbox : MonoBehaviour
             if (bullet.isActive)
             {
                 UbhObjectPool.instance.ReleaseBullet(bullet);
-                soundManager.sounds["DEAD"].Play();
+                soundManager.sounds["PianoBreak"].Play();
                 if (manager.life == 1) {
                     manager.score = 0; // 스코어 저장 후 초기화
                     manager.scrollSpeed = 0f; // 배경스크롤정지
