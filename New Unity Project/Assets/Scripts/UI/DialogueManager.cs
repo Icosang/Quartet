@@ -25,15 +25,18 @@ public class DialogueManager : MonoBehaviour
 
     public Text text;
     public SpriteRenderer rendererSprite; //스탠딩일러스트
+    public SpriteRenderer rendererSprite2; //스탠딩일러스트2
     public SpriteRenderer rendererDialogueWindow; //대화상자
 
     private List<string> listSentences;
     private List<Sprite> listSprites;
+    private List<Sprite> listSprites2;
     private List<Sprite> listDialogueWindows;
 
     private int count; // 대화 진행 상황 카운트.
 
     public Animator animSprite;
+    public Animator animSprite2;
     //public Animator animDialogueWindow;
 
     public bool talking = false;
@@ -48,6 +51,7 @@ public class DialogueManager : MonoBehaviour
         text.text = "";
         listSentences = new List<string>();
         listSprites = new List<Sprite>();
+        listSprites2 = new List<Sprite>();
         listDialogueWindows = new List<Sprite>();
     }
 
@@ -59,11 +63,11 @@ public class DialogueManager : MonoBehaviour
         {
             listSentences.Add(dialogue.sentences[i]);
             listSprites.Add(dialogue.sprites[i]);
+            listSprites2.Add(dialogue.sprites2[i]);
             listDialogueWindows.Add(dialogue.dialogueWindows[i]);
         }
-
-        animSprite.SetBool("Appear", true);
         //animDialogueWindow.SetBool("Appear", true);
+        rendererDialogueWindow.enabled = true;
         StartCoroutine(StartDialogueCoroutine());
     }
     public void ExitDialogue()
@@ -74,6 +78,8 @@ public class DialogueManager : MonoBehaviour
         listSprites.Clear();
         listDialogueWindows.Clear();
         animSprite.SetBool("Appear", false);
+        animSprite2.SetBool("Appear", false);
+        rendererDialogueWindow.enabled = false;
         //animDialogueWindow.SetBool("Appear", false);
         talking = false;
     }
@@ -85,35 +91,43 @@ public class DialogueManager : MonoBehaviour
         {
             if (listDialogueWindows[count] != listDialogueWindows[count - 1])
             {
-                animSprite.SetBool("Change", true);
                 //animDialogueWindow.SetBool("Appear", false);
                 yield return new WaitForSeconds(0.2f);
                 rendererDialogueWindow.GetComponent<SpriteRenderer>().sprite = listDialogueWindows[count];
                 rendererSprite.GetComponent<SpriteRenderer>().sprite = listSprites[count];
                 //animDialogueWindow.SetBool("Appear", true);
-                animSprite.SetBool("Change", false);
             }
-            else
-            {
                 if (listSprites[count] != listSprites[count - 1])
                 {
-                    animSprite.SetBool("Change", true);
+                    if(listSprites[count - 1] == null) animSprite.SetBool("Appear", true);
                     yield return new WaitForSeconds(0.1f);
                     rendererSprite.GetComponent<SpriteRenderer>().sprite = listSprites[count];
-                    animSprite.SetBool("Change", false);
+                }
+                if (listSprites2[count] != listSprites2[count - 1])
+                {
+                    if (listSprites2[count - 1] == null) animSprite2.SetBool("Appear", true);
+                    yield return new WaitForSeconds(0.1f);
+                    rendererSprite2.GetComponent<SpriteRenderer>().sprite = listSprites2[count];
                 }
                 else
                 {
                     yield return new WaitForSeconds(0.05f);
                 }
-            }
 
         }
-        else
+        else if (count == 0)
         {
             yield return new WaitForSeconds(0.05f);
             //rendererDialogueWindow.GetComponent<SpriteRenderer>().sprite = listDialogueWindows[count];
             rendererSprite.GetComponent<SpriteRenderer>().sprite = listSprites[count];
+            rendererSprite2.GetComponent<SpriteRenderer>().sprite = listSprites2[count];
+            if (listSprites[count] != null) {
+                animSprite.SetBool("Appear", true);
+            }
+            if (listSprites2[count] != null)
+            {
+                animSprite2.SetBool("Appear", true);
+            }
         }
         keyActivated = true;
         ontalk = true;

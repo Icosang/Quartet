@@ -5,10 +5,15 @@ public class SpriteAnim : MonoBehaviour
     [SerializeField]
     Animator anim;
     bool pausing = false;
-    public bool indialogue = false;
+    GameManager manager;
+
+    private void Start()
+    {
+        manager = D.Get<GameManager>();
+    }
     void Update()
     {
-        if (!indialogue) {
+        if (!manager.isindialogue) {
             if (Input.GetKeyDown(KeyCode.Escape) && !pausing)
             {
                 anim.SetBool("pausing", true);
