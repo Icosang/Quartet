@@ -22,7 +22,7 @@ public class CanvasController : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !manager.ispausing && manager.isplayscreen) {
+        if (Input.GetKeyDown(KeyCode.Escape) && !manager.ispausing && manager.isplayscreen && !manager.isindialogue) {
             timer.Pause();
             manager.ispausing = true;
             Camera.main.GetComponent<D2FogsNoiseTexPE>().VerticalSpeed = 0f;            

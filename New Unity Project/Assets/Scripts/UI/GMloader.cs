@@ -22,7 +22,11 @@ public class GMloader : MonoBehaviour
             manager.isplayscreen = true;
             cc.OnUI(0);
             cc.OnUI(1);
-            Camera.main.GetComponent<D2FogsNoiseTexPE>().VerticalSpeed = 0.2f;
+            cc.OnUI(2);
+            // 플레이어 조작 봉인, 다이얼로그 엑시트에서 풀어준다.      
+            Camera.main.GetComponent<D2FogsNoiseTexPE>().VerticalSpeed = 0f;
+            manager.ispausing = true;
+            manager.isindialogue = true;
         }
         if (gameObject.tag == "MainScreen") {
             cc.OffUI(0);

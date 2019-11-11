@@ -5,11 +5,12 @@ public class Drum : UbhEnemy
 {
     enum PatternState
     {
+        Idle,
         Pattern1,
         Pattern2,
         Pattern3
     }
-    PatternState pattern = PatternState.Pattern1;
+    PatternState pattern = PatternState.Idle;
     [SerializeField]
     Collider2D collider = null;
     [SerializeField]
@@ -20,13 +21,21 @@ public class Drum : UbhEnemy
     protected override void Start()
     {
         base.Start();
-        StartCoroutine(StartPattern());
-        soundManager.sounds["Bunnyhop"].Play();
         hp = D.Get<HpBarController>();
         cc = D.Get<CanvasController>();
     }
     void FixedUpdate()
     {
+        if ((!manager.isindialogue && pattern.Equals(PatternState.Idle)) || manager.retry)
+        {
+            pattern = PatternState.Pattern1;
+            StartCoroutine(StartPattern());
+            soundManager.sounds["Bunnyhop"].Play();
+            // 리트라이시 수정하는 값들
+            manager.retry = false;
+            manager.ispausing = false;
+            manager.isindialogue = false;
+        }
         //체력바관리
         hp.Scaling(m_hp/maxhp);
 

@@ -146,6 +146,7 @@
     <Compile Include="Assets\Scripts\UI\GameOver.cs" />
     <Compile Include="Assets\Scripts\UI\GMloader.cs" />
     <Compile Include="Assets\Scripts\UI\Life.cs" />
+    <Compile Include="Assets\Scripts\UI\LifeImage.cs" />
     <Compile Include="Assets\Scripts\UI\Lwall.cs" />
     <Compile Include="Assets\Scripts\UI\MenuSelector.cs" />
     <Compile Include="Assets\Scripts\UI\PauseMenu.cs" />

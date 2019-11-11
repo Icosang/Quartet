@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UB.Simple2dWeatherEffects.Standard;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -43,6 +44,9 @@ public class DialogueManager : MonoBehaviour
     private bool keyActivated = false;
     bool ontalk = false;
     float talkdelay = 0.05f;
+    GameManager manager;
+    [SerializeField]
+    Dialogue dialogue;
 
     // Use this for initialization
     void Start()
@@ -53,6 +57,8 @@ public class DialogueManager : MonoBehaviour
         listSprites = new List<Sprite>();
         listSprites2 = new List<Sprite>();
         listDialogueWindows = new List<Sprite>();
+        manager = D.Get<GameManager>();
+        ShowDialogue(dialogue);
     }
 
     public void ShowDialogue(Dialogue dialogue)
@@ -82,8 +88,14 @@ public class DialogueManager : MonoBehaviour
         rendererDialogueWindow.enabled = false;
         //animDialogueWindow.SetBool("Appear", false);
         talking = false;
+        StartCoroutine(WaitandRelease());
     }
-
+    IEnumerator WaitandRelease() {
+        yield return new WaitForSeconds(2.0f);
+        manager.isindialogue = false;
+        manager.ispausing = false;
+        Camera.main.GetComponent<D2FogsNoiseTexPE>().VerticalSpeed = 0.2f;
+    }
 
     IEnumerator StartDialogueCoroutine()
     {

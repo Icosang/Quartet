@@ -77,6 +77,8 @@ public class PauseMenu : MonoBehaviour
                     manager.ispausing = false;
                     SceneManager.LoadScene("DrumScene");
                     cc.OffUI(3);
+                    Camera.main.GetComponent<D2FogsNoiseTexPE>().VerticalSpeed = 0.2f;
+                    manager.retry = true;
                     break;
                 case 2:
                     index = 0; // 자체 인덱스 초기화

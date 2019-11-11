@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public bool timebonus { get; set; } = true;
     public bool ispausing { get; set; } = false;
     public bool isindialogue { get; set; } = false;
+    public bool retry { get; set; } = false;
     void Awake() {
         //SceneManager.LoadScene("MainMenu", LoadSceneMode.Additive);
     }

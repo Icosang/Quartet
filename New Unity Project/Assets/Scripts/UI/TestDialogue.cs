@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using System.Collections;
 public class TestDialogue : MonoBehaviour
 {
     [SerializeField]
@@ -10,12 +10,12 @@ public class TestDialogue : MonoBehaviour
     private void Start()
     {
         DM = FindObjectOfType<DialogueManager>();
+        StartCoroutine(StartDialogue());
+        
     }
-    private void FixedUpdate()
-    {
-        if (Input.GetKeyDown(KeyCode.X) && !started) {
-            DM.ShowDialogue(dialogue);
-            started = true;
-        }
+    IEnumerator StartDialogue() {
+        yield return new WaitForSeconds(5.0f);
+        DM.ShowDialogue(dialogue);
     }
+
 }
