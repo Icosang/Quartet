@@ -23,6 +23,7 @@ public class Drum : UbhEnemy
         base.Start();
         hp = D.Get<HpBarController>();
         cc = D.Get<CanvasController>();
+        pattern = PatternState.Idle;
     }
     void FixedUpdate()
     {

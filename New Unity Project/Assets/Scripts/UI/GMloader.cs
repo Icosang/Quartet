@@ -34,6 +34,10 @@ public class GMloader : MonoBehaviour
             cc.OffUI(1);
             cc.OffUI(2);
             cc.OffUI(3);
+            cc.OffUI(4);
+            manager.isplayscreen = false;
+            manager.ispausing = false;
+            manager.isindialogue = false;
         }
     }
 }
