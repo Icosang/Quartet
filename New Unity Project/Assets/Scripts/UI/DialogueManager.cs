@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UB.Simple2dWeatherEffects.Standard;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -40,6 +41,7 @@ public class DialogueManager : MonoBehaviour
     GameManager manager;
     [SerializeField]
     Dialogue dialogue;
+    SoundManager soundManager;
 
     // Use this for initialization
     void Start()
@@ -52,6 +54,7 @@ public class DialogueManager : MonoBehaviour
         listDialogueWindows = new List<Sprite>();
         manager = D.Get<GameManager>();
         ShowDialogue(dialogue);
+        soundManager = D.Get<SoundManager>();
     }
 
     public void ShowDialogue(Dialogue dialogue)
@@ -89,6 +92,13 @@ public class DialogueManager : MonoBehaviour
         manager.isindialogue = false;
         manager.ispausing = false;
         Camera.main.GetComponent<D2FogsNoiseTexPE>().VerticalSpeed = 0.2f;
+        if (manager.cleared) {
+            soundManager.sounds["Bunnyhop"].Stop();
+            manager.Fade();
+            yield return new WaitForSeconds(1.5f);
+            
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 
     IEnumerator StartDialogueCoroutine()

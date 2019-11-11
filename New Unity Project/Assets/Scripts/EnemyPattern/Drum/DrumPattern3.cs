@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UB.Simple2dWeatherEffects.Standard;
 
 public class DrumPattern3 : MonoBehaviour
 {
@@ -15,12 +14,17 @@ public class DrumPattern3 : MonoBehaviour
         pool = D.Get<UbhObjectPool>();
     }
     void OnDisable() {
-        D.Get<SoundManager>().sounds["DrumBreak"].Play();
-        pool.ReleaseAllBullet();
-        // 대화 On, 4번은 클리어대화
-        cc.OnUI(4);
-        // 플레이어 조작 봉인, 다이얼로그 엑시트에서 풀어준다.
-        manager.ispausing = true;
-        manager.isindialogue = true;
+        if (manager.isplayscreen)
+        {
+            D.Get<SoundManager>().sounds["DrumBreak"].Play();
+            pool.ReleaseAllBullet();
+            // 대화 On, 4번은 클리어대화
+            cc.OnUI(4);
+            // 플레이어 조작 봉인, 다이얼로그 엑시트에서 풀어준다.
+            manager.ispausing = true;
+            manager.isindialogue = true;
+            //임시
+            manager.cleared = true;
+        }
     }
 }

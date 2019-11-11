@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public bool isindialogue { get; set; } = false;
     public bool retry { get; set; } = false;
     public bool gameover { get; set; } = false;
+    //임시, 이따 지우거나 함
+    public bool cleared { get; set; } = false;
     [SerializeField]
     Animator fade = null;
     [SerializeField]
@@ -31,6 +33,8 @@ public class GameManager : MonoBehaviour
 
     IEnumerator IFade() {
         fade.SetBool("On", true);
+        yield return new WaitForSeconds(5.0f);
+        fade.SetBool("On", false);
         yield return null;
     }
     public void Endure()
