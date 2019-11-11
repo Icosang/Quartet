@@ -24,7 +24,7 @@ public class LinearShooter : MonoBehaviour
     void FixedUpdate()
     {
         // 5 - Shooting
-        if (Input.GetKey(KeyCode.Z) && !manager.ispausing)
+        if (Input.GetKey(KeyCode.Z) && !manager.ispausing && !manager.isindialogue)
         {
             if (delayTimer <= 0)
             {

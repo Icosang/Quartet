@@ -55,6 +55,7 @@ public class Drum : UbhEnemy
             D.Get<SoundManager>().sounds["SPELL"].Play();
             pool.ReleaseAllBullet();
             //보스 반투명화, 버티기 돌입
+            manager.Endure();
             Invincible = true;
             StartCoroutine(Fade());
 

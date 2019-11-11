@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public bool gameover { get; set; } = false;
     [SerializeField]
     Animator fade = null;
+    [SerializeField]
+    Animator endure = null;
     
     void Awake() {
         //SceneManager.LoadScene("MainMenu", LoadSceneMode.Additive);
@@ -29,6 +31,16 @@ public class GameManager : MonoBehaviour
 
     IEnumerator IFade() {
         fade.SetBool("On", true);
+        yield return null;
+    }
+    public void Endure()
+    {
+        StartCoroutine(IEndure());
+    }
+
+    IEnumerator IEndure()
+    {
+        endure.SetBool("On", true);
         yield return null;
     }
 }
