@@ -23,9 +23,9 @@ public class GMloader : MonoBehaviour
             cc.OnUI(0);
             // 1은 체력바로, 보스전 시작시 On... 이었으나 기술문제로 보류
             cc.OnUI(1);
+            // 대화 On
             cc.OnUI(2);
-            // 플레이어 조작 봉인, 다이얼로그 엑시트에서 풀어준다.      
-            Camera.main.GetComponent<D2FogsNoiseTexPE>().VerticalSpeed = 0f;
+            // 플레이어 조작 봉인, 다이얼로그 엑시트에서 풀어준다.
             manager.ispausing = true;
             manager.isindialogue = true;
         }

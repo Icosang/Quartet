@@ -375,7 +375,7 @@ GameObject:
   - component: {fileID: 66161192}
   - component: {fileID: 66161191}
   m_Layer: 0
-  m_Name: Stage2script
+  m_Name: S1Clearscript
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -406,7 +406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - "\uD760, \uBD84\uBA85 \uC5EC\uAE30\uCBE4 \uC788\uC744 \uD150\uB370..."
+  - "\uC5B4\uB54C? \uB4E4\uC5B4\uC904\uB9CC \uD558\uC9C0?"
   - "\uB4DC\uB7FC\uC740 \uC5B4\uB514 \uC788\uB294 \uAC70\uC57C?\n"
   - "\uBB50\uC57C, \uB098 \uBD88\uB800\uC5B4?"
   - "\uC544, \uADF8\uB798."
@@ -1057,7 +1057,7 @@ GameObject:
   - component: {fileID: 407646063}
   - component: {fileID: 407646062}
   m_Layer: 0
-  m_Name: Stage1TextBox
+  m_Name: S1ClearTextBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1151,7 +1151,7 @@ GameObject:
   - component: {fileID: 439478573}
   - component: {fileID: 439478572}
   m_Layer: 0
-  m_Name: Stage1TextBox
+  m_Name: S1TextBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2850,11 +2850,11 @@ MonoBehaviour:
   text: {fileID: 679713176}
   rendererSprite: {fileID: 118237585}
   rendererSprite2: {fileID: 1460148373}
-  rendererDialogueWindow: {fileID: 439478572}
+  rendererDialogueWindow: {fileID: 407646062}
   animSprite: {fileID: 118237586}
   animSprite2: {fileID: 1460148375}
   talking: 0
-  dialogue: {fileID: 1427751645}
+  dialogue: {fileID: 66161192}
 --- !u!1 &1179401229
 GameObject:
   m_ObjectHideFlags: 0
@@ -3502,7 +3502,7 @@ GameObject:
   - component: {fileID: 1427751645}
   - component: {fileID: 1427751648}
   m_Layer: 0
-  m_Name: Stage1script
+  m_Name: S1script
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

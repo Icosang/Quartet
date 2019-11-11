@@ -12,15 +12,8 @@ public class DialogueManager : MonoBehaviour
     #region Singleton
     private void Awake()
     {
-        if (instance == null)
-        {
-            DontDestroyOnLoad(this.gameObject);
-            instance = this;
-        }
-        else
-        {
-            Destroy(this.gameObject);
-        }
+        DontDestroyOnLoad(this.gameObject);
+        instance = this;
     }
     #endregion Singleton
 
