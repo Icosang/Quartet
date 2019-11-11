@@ -91,7 +91,8 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(WaitandRelease());
     }
     IEnumerator WaitandRelease() {
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(1.0f);
+        //GMloader에서 걸었던 것 해제
         manager.isindialogue = false;
         manager.ispausing = false;
         Camera.main.GetComponent<D2FogsNoiseTexPE>().VerticalSpeed = 0.2f;

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class MenuSelector : MonoBehaviour
 {
@@ -44,8 +45,8 @@ public class MenuSelector : MonoBehaviour
         {
             switch (index) {
                 case 0:
-                    SceneManager.LoadScene("DrumScene");
                     soundmanager.sounds["1635"].Stop();
+                    StartCoroutine(GameStart());
                     break;
                 case 1:
                     break;
@@ -57,5 +58,12 @@ public class MenuSelector : MonoBehaviour
             }
         }
 
+    }
+    IEnumerator GameStart()
+    {
+        manager.Fade();
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene("DrumScene");
+        yield return null;
     }
 }

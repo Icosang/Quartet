@@ -21,6 +21,7 @@ public class PlayerHitbox : MonoBehaviour
         manager = D.Get<GameManager>();
         soundManager = D.Get<SoundManager>();
         timer = D.Get<UbhTimer>();
+        manager.gameover = false;
     }
     private void OnTriggerStay2D(Collider2D c)
     {
@@ -52,6 +53,7 @@ public class PlayerHitbox : MonoBehaviour
                     soundManager.sounds["Bunnyhop"].Stop();
                     Camera.main.GetComponent<D2FogsNoiseTexPE>().VerticalSpeed = 0f; //안개멈춤
                     SceneManager.LoadScene("GameOver", LoadSceneMode.Additive); // 게임오버씬 호출
+                    manager.gameover = false;
                     Destroy(transform.parent.gameObject); // 죽음
                     return;
                 }

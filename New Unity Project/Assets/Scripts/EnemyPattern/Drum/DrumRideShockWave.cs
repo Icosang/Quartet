@@ -5,6 +5,7 @@ using UnityEngine;
 public class DrumRideShockWave : MonoBehaviour
 {
     CircleCollider2D circle;
+    GameManager manager;
 
     float maxRadius = 18f;
     float t = 0f;
@@ -14,10 +15,15 @@ public class DrumRideShockWave : MonoBehaviour
         circle = GetComponent<CircleCollider2D>();
         StartCoroutine(Shock());
     }
+    private void Start()
+    {
+        manager = D.Get<GameManager>();
+    }
     IEnumerator Shock()
     {
         while (true)
         {
+            //if (manager.gameover) StopCoroutine("Shock");
             yield return new WaitForSeconds(2f);
             ShockWave.Get().StartIt(transform.position, 1f, maxRadius, 0.5f, 0.1f);
             StartCoroutine(CircleChanger());
