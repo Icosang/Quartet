@@ -105,14 +105,8 @@ public class DialogueManager : MonoBehaviour
     {
         if (count > 0)
         {
-            if (listDialogueWindows[count] != listDialogueWindows[count - 1])
-            {
-                //animDialogueWindow.SetBool("Appear", false);
                 yield return new WaitForSeconds(0.2f);
                 rendererDialogueWindow.GetComponent<SpriteRenderer>().sprite = listDialogueWindows[count];
-                rendererSprite.GetComponent<SpriteRenderer>().sprite = listSprites[count];
-                //animDialogueWindow.SetBool("Appear", true);
-            }
                 if (listSprites[count] != listSprites[count - 1])
                 {
                     if(listSprites[count - 1] == null) animSprite.SetBool("Appear", true);
@@ -134,7 +128,7 @@ public class DialogueManager : MonoBehaviour
         else if (count == 0)
         {
             yield return new WaitForSeconds(0.05f);
-            //rendererDialogueWindow.GetComponent<SpriteRenderer>().sprite = listDialogueWindows[count];
+            rendererDialogueWindow.GetComponent<SpriteRenderer>().sprite = listDialogueWindows[count];
             rendererSprite.GetComponent<SpriteRenderer>().sprite = listSprites[count];
             rendererSprite2.GetComponent<SpriteRenderer>().sprite = listSprites2[count];
             if (listSprites[count] != null) {

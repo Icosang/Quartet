@@ -406,51 +406,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sentences:
-  - "\uC5B4\uB54C? \uB4E4\uC5B4\uC904\uB9CC \uD558\uC9C0?"
-  - "\uB4DC\uB7FC\uC740 \uC5B4\uB514 \uC788\uB294 \uAC70\uC57C?\n"
-  - "\uBB50\uC57C, \uB098 \uBD88\uB800\uC5B4?"
-  - "\uC544, \uADF8\uB798."
-  - "\uC774\uBC88 \uC791\uACE1\uB300\uD68C\uC5D0 \uC2A4\uCE74\uC6B0\uD2B8\uD558\uACE0
-    \uC2F6\uC5B4\uC11C \uB9D0\uC774\uC57C."
-  - "\uC774\uCABD \uC2E4\uB825\uC740 \uBCF4\uC99D\uD558\uC9C0."
-  - "\uC2A4\uC2A4\uB85C \uC2E4\uB825\uC744 \uBCF4\uC99D\uD55C\uB2E4\uB2C8, \uC5B4\uB5BB\uAC8C
-    \uB41C \uC790\uC2E0\uAC10\uC778\uAC70\uC57C."
-  - "\uD655\uC2E4\uD788 \uB108 \uC815\uB3C4\uBA74 \uAD1C\uCC2E\uC740 \uC2E4\uB825\uC774\uACA0\uC9C0\uB9CC..."
-  - "\uAE00\uC384. \uC88B\uC740 \uC544\uC774\uB514\uC5B4\uAC00 \uC788\uB294\uC9C0\uB294
-    \uBAA8\uB974\uB294 \uAC70\uC796\uC544?"
-  - "\uC5B4\uB514 \uD55C\uBC88 \uC9C1\uC811 \uB4E4\uC5B4\uBD10\uC57C\uACA0\uC5B4!"
+  - "\uC5B4\uB54C, \uB4E4\uC5B4\uC904 \uB9CC\uD558\uC9C0?"
+  - "\uD6C4\uC6B0, \uC774\uAC70 \uAF64 \uAD1C\uCC2E\uB124.\n"
+  - "\uADF8\uB798, \uAC19\uC774 \uAC00\uC790!"
+  - "\uADF8\uB798, \uC774 \uB2E4\uC74C\uC5D4 \uBB34\uC2A8 \uC545\uAE30\uB97C \uC12D\uC678\uD558\uB294\uAC8C
+    \uC88B\uC744\uAE4C?"
+  - "\uC74C. \uAE00\uC384..."
+  - "\uB124 \uBA5C\uB85C\uB514\uB97C \uCEE4\uBC84\uD574\uC904\uB9CC\uD55C \uBCF4\uC870\uC545\uAE30\uB294
+    \uC5B4\uB54C?"
+  - "\uD50C\uB808\uC774\uD574\uC8FC\uC154\uC11C \uAC10\uC0AC\uD569\uB2C8\uB2E4."
   sprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 21300000, guid: b9d39f247fb5bbd43bb98da3cd905856, type: 3}
-  - {fileID: 21300000, guid: e83ef094627be1b48b4f2287735ba99b, type: 3}
-  - {fileID: 21300000, guid: e83ef094627be1b48b4f2287735ba99b, type: 3}
   - {fileID: 21300000, guid: e83ef094627be1b48b4f2287735ba99b, type: 3}
   - {fileID: 21300000, guid: b9d39f247fb5bbd43bb98da3cd905856, type: 3}
+  - {fileID: 21300000, guid: b9d39f247fb5bbd43bb98da3cd905856, type: 3}
+  - {fileID: 21300000, guid: e83ef094627be1b48b4f2287735ba99b, type: 3}
   - {fileID: 21300000, guid: b9d39f247fb5bbd43bb98da3cd905856, type: 3}
   - {fileID: 21300000, guid: b9d39f247fb5bbd43bb98da3cd905856, type: 3}
   - {fileID: 21300000, guid: b9d39f247fb5bbd43bb98da3cd905856, type: 3}
   sprites2:
   - {fileID: 21300000, guid: 220789048aa1df24893b05887e4fc394, type: 3}
+  - {fileID: 21300000, guid: 895fa4d7d382df846906118fb28d1ac8, type: 3}
+  - {fileID: 21300000, guid: 895fa4d7d382df846906118fb28d1ac8, type: 3}
   - {fileID: 21300000, guid: 220789048aa1df24893b05887e4fc394, type: 3}
   - {fileID: 21300000, guid: 895fa4d7d382df846906118fb28d1ac8, type: 3}
+  - {fileID: 21300000, guid: 895fa4d7d382df846906118fb28d1ac8, type: 3}
   - {fileID: 21300000, guid: 220789048aa1df24893b05887e4fc394, type: 3}
-  - {fileID: 21300000, guid: 220789048aa1df24893b05887e4fc394, type: 3}
-  - {fileID: 21300000, guid: 220789048aa1df24893b05887e4fc394, type: 3}
-  - {fileID: 21300000, guid: 895fa4d7d382df846906118fb28d1ac8, type: 3}
-  - {fileID: 21300000, guid: 895fa4d7d382df846906118fb28d1ac8, type: 3}
-  - {fileID: 21300000, guid: 895fa4d7d382df846906118fb28d1ac8, type: 3}
-  - {fileID: 21300000, guid: 895fa4d7d382df846906118fb28d1ac8, type: 3}
   dialogueWindows:
-  - {fileID: 21300000, guid: 9e26f91636ce338499f21066b2747e12, type: 3}
-  - {fileID: 21300000, guid: 9e26f91636ce338499f21066b2747e12, type: 3}
-  - {fileID: 21300000, guid: 9e26f91636ce338499f21066b2747e12, type: 3}
-  - {fileID: 21300000, guid: 9e26f91636ce338499f21066b2747e12, type: 3}
-  - {fileID: 21300000, guid: 9e26f91636ce338499f21066b2747e12, type: 3}
-  - {fileID: 21300000, guid: 9e26f91636ce338499f21066b2747e12, type: 3}
-  - {fileID: 21300000, guid: 9e26f91636ce338499f21066b2747e12, type: 3}
-  - {fileID: 21300000, guid: 9e26f91636ce338499f21066b2747e12, type: 3}
-  - {fileID: 21300000, guid: 9e26f91636ce338499f21066b2747e12, type: 3}
+  - {fileID: 21300000, guid: 32b1177afbd31114fac3d667e4190a10, type: 3}
+  - {fileID: 21300000, guid: 50d7fcef2902c6245a5fd58ffee0da2d, type: 3}
+  - {fileID: 21300000, guid: 50d7fcef2902c6245a5fd58ffee0da2d, type: 3}
+  - {fileID: 21300000, guid: 32b1177afbd31114fac3d667e4190a10, type: 3}
+  - {fileID: 21300000, guid: 50d7fcef2902c6245a5fd58ffee0da2d, type: 3}
+  - {fileID: 21300000, guid: 50d7fcef2902c6245a5fd58ffee0da2d, type: 3}
   - {fileID: 21300000, guid: 9e26f91636ce338499f21066b2747e12, type: 3}
 --- !u!4 &66161193
 Transform:
@@ -3631,16 +3618,16 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 895fa4d7d382df846906118fb28d1ac8, type: 3}
   - {fileID: 21300000, guid: 895fa4d7d382df846906118fb28d1ac8, type: 3}
   dialogueWindows:
-  - {fileID: 21300000, guid: 9e26f91636ce338499f21066b2747e12, type: 3}
-  - {fileID: 21300000, guid: 9e26f91636ce338499f21066b2747e12, type: 3}
-  - {fileID: 21300000, guid: 9e26f91636ce338499f21066b2747e12, type: 3}
-  - {fileID: 21300000, guid: 9e26f91636ce338499f21066b2747e12, type: 3}
-  - {fileID: 21300000, guid: 9e26f91636ce338499f21066b2747e12, type: 3}
-  - {fileID: 21300000, guid: 9e26f91636ce338499f21066b2747e12, type: 3}
-  - {fileID: 21300000, guid: 9e26f91636ce338499f21066b2747e12, type: 3}
-  - {fileID: 21300000, guid: 9e26f91636ce338499f21066b2747e12, type: 3}
-  - {fileID: 21300000, guid: 9e26f91636ce338499f21066b2747e12, type: 3}
-  - {fileID: 21300000, guid: 9e26f91636ce338499f21066b2747e12, type: 3}
+  - {fileID: 21300000, guid: 32b1177afbd31114fac3d667e4190a10, type: 3}
+  - {fileID: 21300000, guid: 32b1177afbd31114fac3d667e4190a10, type: 3}
+  - {fileID: 21300000, guid: 50d7fcef2902c6245a5fd58ffee0da2d, type: 3}
+  - {fileID: 21300000, guid: 32b1177afbd31114fac3d667e4190a10, type: 3}
+  - {fileID: 21300000, guid: 32b1177afbd31114fac3d667e4190a10, type: 3}
+  - {fileID: 21300000, guid: 32b1177afbd31114fac3d667e4190a10, type: 3}
+  - {fileID: 21300000, guid: 50d7fcef2902c6245a5fd58ffee0da2d, type: 3}
+  - {fileID: 21300000, guid: 50d7fcef2902c6245a5fd58ffee0da2d, type: 3}
+  - {fileID: 21300000, guid: 50d7fcef2902c6245a5fd58ffee0da2d, type: 3}
+  - {fileID: 21300000, guid: bac42d54efeb2bb4d99c4aa5e6d5acef, type: 3}
 --- !u!4 &1427751647
 Transform:
   m_ObjectHideFlags: 0

@@ -49,12 +49,12 @@ public class PlayerScript : MonoBehaviour
             destination =
                 new Vector2(transform.position.x + (inputX * speed * Time.deltaTime/4f), transform.position.y + (inputY * speed * Time.deltaTime/4f));
         }
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             transform.Find("PlayerHitbox").gameObject.GetComponent<SpriteRenderer>().enabled = true;
 
         }
-        if (Input.GetKeyUp(KeyCode.LeftShift))
+        else
         {
             transform.Find("PlayerHitbox").gameObject.GetComponent<SpriteRenderer>().enabled = false;
 

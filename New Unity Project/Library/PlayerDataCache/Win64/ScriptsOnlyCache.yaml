@@ -1177,7 +1177,7 @@ ScriptsOnlyBuild:
     className: Lwall
   - hash:
       serializedVersion: 2
-      Hash: 2645f69aad644febb7a057e0e6441bcb
+      Hash: 776ecf0cfe273104c299738b5f6a1746
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DialogueManager
@@ -1583,4 +1583,4 @@ ScriptsOnlyBuild:
   - Assets/Resources/Scenes/DrumScene.unity
   - Assets/Resources/Scenes/GameManager.unity
   - Assets/Resources/Scenes/GameOver.unity
-  playerPath: C:/Users/you81/Desktop/pr/New Unity Project.exe
+  playerPath: C:/Users/you81/Desktop/Quartet/New Unity Project.exe
