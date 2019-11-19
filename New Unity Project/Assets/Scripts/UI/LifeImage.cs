@@ -30,6 +30,8 @@ public class LifeImage : MonoBehaviour
                 lifes[2].color = new Color(0,0,0, 1);
                 break;
             case 4:
+                lifes[0].color = new Color(0, 0, 0, 0);
+                lifes[3].color = new Color(0, 0, 0, 1);
                 break;
         }
     }
