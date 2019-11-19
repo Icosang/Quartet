@@ -45,6 +45,8 @@ public class GameManager : MonoBehaviour
     IEnumerator IEndure()
     {
         endure.SetBool("On", true);
+        yield return new WaitForSeconds(2.0f);
+        endure.SetBool("On", false);
         yield return null;
     }
 }

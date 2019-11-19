@@ -13,7 +13,7 @@ public class GameOver : MonoBehaviour
     void Update() {
         if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.Return)) {
             SceneManager.LoadScene("MainMenu");
-            manager.retry = true;
+            //manager.retry = true;
             // 여러가지 초기화
             D.Get<UbhObjectPool>().ReleaseAllBullet();
             D.Get<GameManager>().scrollSpeed = 0.5f;

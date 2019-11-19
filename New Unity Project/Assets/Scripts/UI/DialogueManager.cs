@@ -44,7 +44,7 @@ public class DialogueManager : MonoBehaviour
     SoundManager soundManager;
 
     // Use this for initialization
-    void Start()
+    void OnEnable()
     {
         count = 0;
         text.text = "";
